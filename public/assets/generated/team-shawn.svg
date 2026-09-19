@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Professional male managing partner placeholder portrait</title>
+  <desc id="desc">A neutral illustrated male professional portrait for a managing partner role.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eff6ff"/><stop offset="1" stop-color="#f6efe4"/></linearGradient>
+    <linearGradient id="jacket" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#162b45"/><stop offset="1" stop-color="#3b5c79"/></linearGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <circle cx="118" cy="492" r="102" fill="#ffffff" opacity=".55"/>
+  <circle cx="510" cy="130" r="88" fill="#c7d8e8" opacity=".55"/>
+  <path d="M124 640c24-143 100-222 196-222s172 79 196 222H124Z" fill="url(#jacket)"/>
+  <path d="M248 640h144l-29-172h-86l-29 172Z" fill="#ffffff"/>
+  <path d="M268 462h104l-22 47c-16 35-44 35-60 0l-22-47Z" fill="#d19a7b"/>
+  <circle cx="320" cy="280" r="112" fill="#dfa986"/>
+  <path d="M218 264c8-80 54-128 116-124 58 4 91 44 91 112-61-18-113-46-158-83-25 21-41 51-49 95Z" fill="#2a211d"/>
+  <path d="M279 326c24 19 58 19 82 0" fill="none" stroke="#6b3a2b" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="278" cy="279" r="8" fill="#221916"/>
+  <circle cx="362" cy="279" r="8" fill="#221916"/>
+  <path d="M229 493c35 38 66 61 91 70 25-9 56-32 91-70" fill="none" stroke="#eaf1f7" stroke-width="18" stroke-linecap="round"/>
+</svg>

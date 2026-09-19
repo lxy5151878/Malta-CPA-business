@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Professional female compliance advisor placeholder portrait</title>
+  <desc id="desc">A neutral illustrated female professional portrait for compliance and audit support.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff2ec"/><stop offset="1" stop-color="#e7eef8"/></linearGradient>
+    <linearGradient id="jacket" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#24304a"/><stop offset="1" stop-color="#6a4b7a"/></linearGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <circle cx="112" cy="122" r="84" fill="#ffffff" opacity=".6"/>
+  <circle cx="516" cy="514" r="112" fill="#c9d8ea" opacity=".55"/>
+  <path d="M125 640c22-137 98-216 195-216s173 79 195 216H125Z" fill="url(#jacket)"/>
+  <path d="M250 640h140l-24-164h-92l-24 164Z" fill="#fff7ee"/>
+  <path d="M268 468h104l-22 44c-16 32-44 32-60 0l-22-44Z" fill="#c4876b"/>
+  <circle cx="320" cy="288" r="108" fill="#dba083"/>
+  <path d="M218 315c-14-99 25-178 101-178 83 0 124 78 103 181-25-52-51-91-103-119-41 23-76 62-101 116Z" fill="#2b2020"/>
+  <path d="M214 316c-24-35-31-75-19-111 33-96 151-104 214-44 34 33 43 87 17 158-31-57-64-96-109-121-43 27-75 66-103 118Z" fill="#3a2826"/>
+  <circle cx="280" cy="287" r="8" fill="#221817"/>
+  <circle cx="362" cy="287" r="8" fill="#221817"/>
+  <path d="M285 342c22 18 48 18 70 0" fill="none" stroke="#7a402e" stroke-width="10" stroke-linecap="round"/>
+  <path d="M231 494c31 34 60 54 89 62 29-8 58-28 89-62" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round"/>
+</svg>

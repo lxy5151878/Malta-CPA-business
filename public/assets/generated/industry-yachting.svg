@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Yachting and tourism finance illustration</title>
+  <desc id="desc">A yacht in a Malta harbour with finance documents and compliance chart.</desc>
+  <defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#dff2fb"/><stop offset=".62" stop-color="#f8fbff"/><stop offset=".63" stop-color="#8ec6d7"/><stop offset="1" stop-color="#4c8fa5"/></linearGradient></defs>
+  <rect width="960" height="540" fill="url(#sea)"/>
+  <path d="M118 320h442l-48 82H178c-35 0-58-28-60-82Z" fill="#fff"/>
+  <path d="M280 140l182 174H258l22-174Z" fill="#203a55"/>
+  <path d="M478 160l134 154H494l-16-154Z" fill="#dcebf2"/>
+  <rect x="650" y="128" width="184" height="242" rx="20" fill="#fff" opacity=".9"/>
+  <rect x="684" y="172" width="112" height="18" rx="9" fill="#27445f"/>
+  <rect x="684" y="220" width="96" height="16" rx="8" fill="#b5cbd7"/>
+  <path d="M684 304l36-34 36 20 46-68" fill="none" stroke="#2a8f7a" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

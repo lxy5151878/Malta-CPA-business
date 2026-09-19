@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Professional male investment partner placeholder portrait</title>
+  <desc id="desc">A neutral illustrated male professional portrait for an investment and fund role.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf2ff"/><stop offset="1" stop-color="#d7efe7"/></linearGradient>
+    <linearGradient id="jacket" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#253858"/><stop offset="1" stop-color="#366d65"/></linearGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <path d="M72 170h128v24H72zm0 52h186v24H72zm0 52h154v24H72z" fill="#9db7c5" opacity=".45"/>
+  <circle cx="498" cy="152" r="76" fill="#ffffff" opacity=".65"/>
+  <path d="M135 640c20-139 92-218 185-218s165 79 185 218H135Z" fill="url(#jacket)"/>
+  <path d="M251 640h138l-21-166h-96l-21 166Z" fill="#ffffff"/>
+  <path d="M265 470h110l-21 45c-17 36-51 36-68 0l-21-45Z" fill="#c98f6f"/>
+  <circle cx="320" cy="281" r="112" fill="#d99b76"/>
+  <path d="M217 263c8-74 48-119 112-119 66 0 107 50 101 132-61-8-116-29-166-62-25 16-41 33-47 49Z" fill="#1f2a38"/>
+  <circle cx="277" cy="279" r="9" fill="#15202b"/>
+  <circle cx="361" cy="279" r="9" fill="#15202b"/>
+  <path d="M286 333c20 16 48 16 68 0" fill="none" stroke="#683826" stroke-width="10" stroke-linecap="round"/>
+  <path d="M226 492c39 34 70 54 94 61 24-7 55-27 94-61" fill="none" stroke="#dce8ef" stroke-width="18" stroke-linecap="round"/>
+</svg>

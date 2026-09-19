@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Startup and technology finance illustration</title>
+  <desc id="desc">Cloud software dashboard, code blocks, and accounting automation workflow.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf3ff"/><stop offset="1" stop-color="#e2f6f1"/></linearGradient></defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <rect x="104" y="100" width="752" height="340" rx="28" fill="#14253a"/>
+  <rect x="144" y="144" width="324" height="252" rx="18" fill="#f8fbff"/>
+  <rect x="512" y="144" width="304" height="252" rx="18" fill="#203a55"/>
+  <path d="M190 218h120m-120 44h172m-172 44h142" stroke="#9fb7c8" stroke-width="18" stroke-linecap="round"/>
+  <path d="M556 332l58-64 58 34 80-94" fill="none" stroke="#58c7a3" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="730" cy="184" r="34" fill="#f2c465"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Real estate and hospitality finance illustration</title>
+  <desc id="desc">Property, hotel, occupancy and management reporting illustration.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7f3ea"/><stop offset="1" stop-color="#e7f1f4"/></linearGradient></defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <rect x="112" y="172" width="250" height="244" rx="18" fill="#fff"/>
+  <path d="M100 184l138-92 138 92" fill="#203a55"/>
+  <rect x="188" y="274" width="58" height="142" rx="8" fill="#d9e6ee"/>
+  <rect x="274" y="256" width="46" height="46" rx="8" fill="#d9e6ee"/>
+  <rect x="488" y="116" width="266" height="300" rx="22" fill="#fff"/>
+  <path d="M532 170h178m-178 52h122m-122 52h148" stroke="#b7ccd8" stroke-width="18" stroke-linecap="round"/>
+  <path d="M532 358h178" stroke="#203a55" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="790" cy="166" r="54" fill="#f2c465"/>
+</svg>

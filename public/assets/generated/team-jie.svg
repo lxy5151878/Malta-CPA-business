@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Professional male advisor placeholder portrait</title>
+  <desc id="desc">A neutral illustrated male professional portrait for XLW Advisory team placeholders.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf4f6"/><stop offset="1" stop-color="#d8e6ef"/></linearGradient>
+    <linearGradient id="jacket" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17324d"/><stop offset="1" stop-color="#2f6c85"/></linearGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <circle cx="505" cy="118" r="76" fill="#bfd4dc" opacity=".55"/>
+  <circle cx="112" cy="520" r="118" fill="#ffffff" opacity=".55"/>
+  <path d="M132 640c19-137 95-219 188-219s169 82 188 219H132Z" fill="url(#jacket)"/>
+  <path d="M232 640h176l-39-174h-98l-39 174Z" fill="#f7f8f6"/>
+  <path d="M260 465h120l-27 57c-14 28-52 28-66 0l-27-57Z" fill="#d9a47f"/>
+  <circle cx="320" cy="275" r="114" fill="#e6b28b"/>
+  <path d="M214 278c5-83 51-139 116-139 61 0 102 42 104 101-65-18-120-45-166-77-30 24-48 61-54 115Z" fill="#35291f"/>
+  <path d="M208 280c-21 2-34 18-28 43 5 22 22 33 43 26l-15-69Zm224 0c21 2 34 18 28 43-5 22-22 33-43 26l15-69Z" fill="#e6b28b"/>
+  <path d="M278 317c22 20 61 20 84 0" fill="none" stroke="#6b3d2c" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="277" cy="272" r="9" fill="#2a2522"/>
+  <circle cx="363" cy="272" r="9" fill="#2a2522"/>
+  <path d="M234 493c26 38 54 61 86 71 32-10 61-33 86-71" fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round"/>
+</svg>
