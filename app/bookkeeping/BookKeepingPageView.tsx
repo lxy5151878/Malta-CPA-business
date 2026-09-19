@@ -6,8 +6,6 @@ import { getSiteCopy, type Lang } from "@/lib/siteCopy";
 export default function BookKeepingPageView({ lang }: { lang: Lang }) {
   const copy = getSiteCopy(lang);
   const p = copy.pages.bookkeeping;
-  const portalIcon = "ai-shield";
-
   return (
     <main className="page-wrapper">
       <Navbar lang={lang} copy={copy} />
@@ -155,7 +153,7 @@ export default function BookKeepingPageView({ lang }: { lang: Lang }) {
               <div className="card-body p-4 p-lg-5">
                 <div className="d-flex align-items-start gap-3">
                   <div className="btn btn-icon btn-lg btn-outline-primary rounded-circle pe-none flex-shrink-0">
-                    <i className={portalIcon} />
+                    <i className="ai-shield" />
                   </div>
                   <div>
                     <h2 className="h1 mb-2">{p.portal.title}</h2>

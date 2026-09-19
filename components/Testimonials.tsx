@@ -15,8 +15,6 @@ export default function Testimonials({ copy }: { copy: SiteCopy }) {
   const [active, setActive] = useState(0);
 
   const sliderRef = useRef<HTMLDivElement | null>(null);
-  const fallbackSwiper = useRef<any>(null);
-
   const activePerson = useMemo(() => items[active % items.length], [active, items]);
 
   // IMPORTANT: provide options so theme.min.js won't crash

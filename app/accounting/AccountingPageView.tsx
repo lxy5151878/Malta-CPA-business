@@ -16,8 +16,6 @@ export default function AccountingPageView({ lang }: { lang: Lang }) {
 
   const resourceIcons = ["ai-grid", "ai-calculator", "ai-wallet", "ai-calculator"] as const;
 
-  const otherServiceIcons = ["ai-percent", "ai-cpu", "ai-users", "ai-trending-up", "ai-notebook", "ai-shield-check"] as const;
-
   return (
     <main className="page-wrapper" id="top">
       <Navbar lang={lang} copy={copy} />
@@ -248,7 +246,12 @@ export default function AccountingPageView({ lang }: { lang: Lang }) {
                 <div className="card-body pb-3">
                   <div className="d-flex align-items-center mb-3">
                     <div className="btn btn-icon btn-sm btn-outline-primary rounded-circle me-3">
-                      <i className={otherServiceIcons[i] ?? "ai-star"} />
+                      <i
+                        className={
+                          ["ai-percent", "ai-cpu", "ai-users", "ai-trending-up", "ai-notebook", "ai-shield-check"][i] ??
+                          "ai-star"
+                        }
+                      />
                     </div>
                     <h3 className="h5 mb-0">{s.title}</h3>
                   </div>
