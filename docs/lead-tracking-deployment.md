@@ -24,7 +24,7 @@ The deployed Firestore rules deny all browser access. The server-side Function u
 
 ## 2. Email notifications
 
-The Function uses Resend. Create a Resend account, verify `accountantsmalta.com`, and create an API key. Then run from the project directory:
+The Function uses Resend for two separate messages: an internal lead notification and a bilingual acknowledgement to the customer. Create a Resend account, verify `accountantsmalta.com`, and create an API key. The verified domain must permit the address configured in `LEAD_FROM_EMAIL`. Then run from the project directory:
 
 ```powershell
 firebase functions:secrets:set RESEND_API_KEY --project accountantsmalta
@@ -40,7 +40,7 @@ LEAD_FROM_EMAIL=XLW Advisory Website <leads@accountantsmalta.com>
 CONTACT_ALLOWED_ORIGINS=https://accountantsmalta.com,https://www.accountantsmalta.com,https://accountantsmalta.web.app,http://localhost:3000,http://127.0.0.1:3000
 ```
 
-Change the recipient if enquiries should go to another monitored mailbox.
+Change the recipient if enquiries should go to another monitored mailbox. The customer acknowledgement uses this address as its reply-to address.
 
 ## 3. Install and deploy
 
@@ -110,7 +110,8 @@ Once qualified-lead reporting is stable, make `Qualified lead` the main bidding 
 - Reject all: optional storage remains denied and no attribution is retained in local storage.
 - Accept all: consent changes to granted and campaign parameters are retained.
 - Invalid form: no Firestore lead and no `generate_lead` event.
-- Valid form: one lead, one notification, one `generate_lead`, then the correct language thank-you page.
+- Valid form: one lead, one internal notification, one customer acknowledgement, one `generate_lead`, then the correct language thank-you page.
+- Firestore: `notificationStatus` and `acknowledgementStatus` both become `sent`; either can independently become `failed` without losing the lead.
 - Double click: submit button prevents duplicate requests.
 - Refresh thank-you page: no additional lead event.
 - Firestore: lead contains source, language, consent, attribution, and `status: new`.

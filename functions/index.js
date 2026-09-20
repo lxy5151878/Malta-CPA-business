@@ -105,37 +105,118 @@ async function enforceRateLimit(req) {
   });
 }
 
-async function sendLeadEmail(leadId, lead) {
+async function sendEmail({ to, replyTo, subject, htmlBody, textBody, idempotencyKey }) {
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${resendApiKey.value()}`,
       "Content-Type": "application/json",
+      "Idempotency-Key": idempotencyKey,
     },
     body: JSON.stringify({
       from: fromEmail.value(),
-      to: [notificationEmail.value()],
-      reply_to: lead.email,
-      subject: `New website enquiry: ${lead.service || "General enquiry"}`,
-      html: `
-        <h2>New XLW Advisory website enquiry</h2>
-        <p><strong>Reference:</strong> ${html(leadId)}</p>
-        <p><strong>Name:</strong> ${html(lead.name)}</p>
-        <p><strong>Company:</strong> ${html(lead.company || "Not supplied")}</p>
-        <p><strong>Email:</strong> ${html(lead.email)}</p>
-        <p><strong>Phone:</strong> ${html(lead.phone || "Not supplied")}</p>
-        <p><strong>Service:</strong> ${html(lead.service || "Not supplied")}</p>
-        <p><strong>Topics:</strong> ${html(lead.topics.join(", ") || "Not supplied")}</p>
-        <p><strong>Language:</strong> ${html(lead.lang)}</p>
-        <p><strong>Message:</strong></p>
-        <p>${html(lead.message).replaceAll("\n", "<br>")}</p>
-      `,
+      to: [to],
+      reply_to: replyTo,
+      subject,
+      html: htmlBody,
+      text: textBody,
     }),
   });
 
+  const result = await response.json().catch(() => ({}));
   if (!response.ok) {
-    throw new Error(`Email provider returned HTTP ${response.status}`);
+    throw new Error(`Email provider returned HTTP ${response.status}: ${cleanString(result.message, 300) || "unknown error"}`);
   }
+
+  return cleanString(result.id, 120) || null;
+}
+
+async function sendLeadEmail(leadId, lead) {
+  return sendEmail({
+    to: notificationEmail.value(),
+    replyTo: lead.email,
+    subject: `New website enquiry: ${lead.service || "General enquiry"}`,
+    idempotencyKey: `lead-notification/${leadId}`,
+    htmlBody: `
+      <h2>New XLW Advisory website enquiry</h2>
+      <p><strong>Reference:</strong> ${html(leadId)}</p>
+      <p><strong>Name:</strong> ${html(lead.name)}</p>
+      <p><strong>Company:</strong> ${html(lead.company || "Not supplied")}</p>
+      <p><strong>Email:</strong> ${html(lead.email)}</p>
+      <p><strong>Phone:</strong> ${html(lead.phone || "Not supplied")}</p>
+      <p><strong>Service:</strong> ${html(lead.service || "Not supplied")}</p>
+      <p><strong>Topics:</strong> ${html(lead.topics.join(", ") || "Not supplied")}</p>
+      <p><strong>Language:</strong> ${html(lead.lang)}</p>
+      <p><strong>Message:</strong></p>
+      <p>${html(lead.message).replaceAll("\n", "<br>")}</p>
+    `,
+    textBody: [
+      "New XLW Advisory website enquiry",
+      `Reference: ${leadId}`,
+      `Name: ${lead.name}`,
+      `Company: ${lead.company || "Not supplied"}`,
+      `Email: ${lead.email}`,
+      `Phone: ${lead.phone || "Not supplied"}`,
+      `Service: ${lead.service || "Not supplied"}`,
+      `Topics: ${lead.topics.join(", ") || "Not supplied"}`,
+      `Language: ${lead.lang}`,
+      "",
+      lead.message,
+    ].join("\n"),
+  });
+}
+
+async function sendCustomerAcknowledgement(leadId, lead) {
+  const isChinese = lead.lang === "zh";
+  const subject = isChinese ? "感谢您联系 XLW Advisory" : "Thank you for contacting XLW Advisory";
+  const service = lead.service || (isChinese ? "一般咨询" : "General enquiry");
+
+  return sendEmail({
+    to: lead.email,
+    replyTo: notificationEmail.value(),
+    subject,
+    idempotencyKey: `lead-acknowledgement/${leadId}`,
+    htmlBody: isChinese
+      ? `
+        <h2>感谢您联系 XLW Advisory</h2>
+        <p>${html(lead.name)}，您好：</p>
+        <p>我们已经收到您的咨询。团队将审核相关信息，并尽快与您联系。</p>
+        <p><strong>咨询编号：</strong>${html(leadId)}</p>
+        <p><strong>服务类别：</strong>${html(service)}</p>
+        <p>如需补充资料，请直接回复本邮件。</p>
+        <p>XLW Advisory</p>
+      `
+      : `
+        <h2>Thank you for contacting XLW Advisory</h2>
+        <p>Dear ${html(lead.name)},</p>
+        <p>We have received your enquiry. Our team will review the information and contact you as soon as possible.</p>
+        <p><strong>Reference:</strong> ${html(leadId)}</p>
+        <p><strong>Service:</strong> ${html(service)}</p>
+        <p>If you need to add any information, please reply directly to this email.</p>
+        <p>XLW Advisory</p>
+      `,
+    textBody: isChinese
+      ? [
+          `${lead.name}，您好：`,
+          "",
+          "我们已经收到您的咨询。团队将审核相关信息，并尽快与您联系。",
+          `咨询编号：${leadId}`,
+          `服务类别：${service}`,
+          "",
+          "如需补充资料，请直接回复本邮件。",
+          "XLW Advisory",
+        ].join("\n")
+      : [
+          `Dear ${lead.name},`,
+          "",
+          "We have received your enquiry. Our team will review the information and contact you as soon as possible.",
+          `Reference: ${leadId}`,
+          `Service: ${service}`,
+          "",
+          "If you need to add any information, please reply directly to this email.",
+          "XLW Advisory",
+        ].join("\n"),
+  });
 }
 
 exports.submitContact = onRequest(
@@ -217,19 +298,48 @@ exports.submitContact = onRequest(
         status: "new",
         source: "website_contact_form",
         notificationStatus: "pending",
+        acknowledgementStatus: "pending",
         createdAt: FieldValue.serverTimestamp(),
         updatedAt: FieldValue.serverTimestamp(),
       });
 
-      try {
-        await sendLeadEmail(leadRef.id, lead);
-        await leadRef.update({ notificationStatus: "sent", notificationSentAt: FieldValue.serverTimestamp() });
-      } catch (emailError) {
+      const [notificationResult, acknowledgementResult] = await Promise.allSettled([
+        sendLeadEmail(leadRef.id, lead),
+        sendCustomerAcknowledgement(leadRef.id, lead),
+      ]);
+      const emailUpdate = {};
+
+      if (notificationResult.status === "fulfilled") {
+        emailUpdate.notificationStatus = "sent";
+        emailUpdate.notificationSentAt = FieldValue.serverTimestamp();
+        emailUpdate.notificationProviderId = notificationResult.value;
+      } else {
+        emailUpdate.notificationStatus = "failed";
         logger.error("Lead email notification failed", {
           leadId: leadRef.id,
-          error: emailError instanceof Error ? emailError.message : "unknown",
+          error: notificationResult.reason instanceof Error ? notificationResult.reason.message : "unknown",
         });
-        await leadRef.update({ notificationStatus: "failed" });
+      }
+
+      if (acknowledgementResult.status === "fulfilled") {
+        emailUpdate.acknowledgementStatus = "sent";
+        emailUpdate.acknowledgementSentAt = FieldValue.serverTimestamp();
+        emailUpdate.acknowledgementProviderId = acknowledgementResult.value;
+      } else {
+        emailUpdate.acknowledgementStatus = "failed";
+        logger.error("Customer acknowledgement email failed", {
+          leadId: leadRef.id,
+          error: acknowledgementResult.reason instanceof Error ? acknowledgementResult.reason.message : "unknown",
+        });
+      }
+
+      try {
+        await leadRef.update(emailUpdate);
+      } catch (statusError) {
+        logger.error("Email delivery status update failed", {
+          leadId: leadRef.id,
+          error: statusError instanceof Error ? statusError.message : "unknown",
+        });
       }
 
       res.status(201).json({ ok: true });
