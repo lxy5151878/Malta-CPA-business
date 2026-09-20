@@ -8,6 +8,7 @@ const logger = require("firebase-functions/logger");
 initializeApp();
 
 const db = getFirestore();
+const releaseVersion = "2026-09-20-email-v2";
 const resendApiKey = defineSecret("RESEND_API_KEY");
 const notificationEmail = defineString("LEAD_NOTIFICATION_EMAIL", {
   default: "info@accountantsmalta.com",
@@ -308,16 +309,20 @@ exports.submitContact = onRequest(
         sendCustomerAcknowledgement(leadRef.id, lead),
       ]);
       const emailUpdate = {};
+      let notificationError = null;
+      let acknowledgementError = null;
 
       if (notificationResult.status === "fulfilled") {
         emailUpdate.notificationStatus = "sent";
         emailUpdate.notificationSentAt = FieldValue.serverTimestamp();
         emailUpdate.notificationProviderId = notificationResult.value;
       } else {
+        notificationError = notificationResult.reason instanceof Error ? notificationResult.reason.message : "unknown";
         emailUpdate.notificationStatus = "failed";
+        emailUpdate.notificationError = cleanString(notificationError, 500);
         logger.error("Lead email notification failed", {
           leadId: leadRef.id,
-          error: notificationResult.reason instanceof Error ? notificationResult.reason.message : "unknown",
+          error: notificationError,
         });
       }
 
@@ -326,10 +331,13 @@ exports.submitContact = onRequest(
         emailUpdate.acknowledgementSentAt = FieldValue.serverTimestamp();
         emailUpdate.acknowledgementProviderId = acknowledgementResult.value;
       } else {
+        acknowledgementError =
+          acknowledgementResult.reason instanceof Error ? acknowledgementResult.reason.message : "unknown";
         emailUpdate.acknowledgementStatus = "failed";
+        emailUpdate.acknowledgementError = cleanString(acknowledgementError, 500);
         logger.error("Customer acknowledgement email failed", {
           leadId: leadRef.id,
-          error: acknowledgementResult.reason instanceof Error ? acknowledgementResult.reason.message : "unknown",
+          error: acknowledgementError,
         });
       }
 
@@ -342,7 +350,16 @@ exports.submitContact = onRequest(
         });
       }
 
-      res.status(201).json({ ok: true });
+      const responseBody = { ok: true, reference: leadRef.id, release: releaseVersion };
+      if (lead.attribution.utm_source === "internal_diagnostic") {
+        responseBody.emailDiagnostics = {
+          notification: emailUpdate.notificationStatus,
+          acknowledgement: emailUpdate.acknowledgementStatus,
+          notificationError,
+          acknowledgementError,
+        };
+      }
+      res.status(201).json(responseBody);
     } catch (error) {
       logger.error("Lead submission failed", { error: error instanceof Error ? error.message : "unknown" });
       res.status(503).json({ error: "The enquiry service is temporarily unavailable." });
