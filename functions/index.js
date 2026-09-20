@@ -142,6 +142,7 @@ exports.submitContact = onRequest(
   {
     region: "europe-west1",
     cors: true,
+    invoker: "public",
     secrets: [resendApiKey],
     maxInstances: 10,
     timeoutSeconds: 30,
