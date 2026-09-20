@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
         {/* Header */}
         <div className="pt-3 pt-lg-4">
           <h1 className="display-6 mb-2">Privacy Policy</h1>
-          <p className="text-body-secondary mb-4">Last updated: January 2026</p>
+          <p className="text-body-secondary mb-4">Last updated: September 2026</p>
         </div>
 
         {/* Content */}
@@ -113,7 +113,31 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <section className="mb-4">
-              <h2 className="h4">7. Data Security Measures</h2>
+              <h2 className="h4">7. Website analytics, advertising and consent</h2>
+              <p className="mb-2">
+                Essential technologies are used to remember privacy choices and protect the enquiry form. With your
+                permission, Google Analytics 4 may measure use of the Website and Google Ads may measure advertising
+                performance. Analytics and advertising storage are denied by default until you make a choice.
+              </p>
+              <p className="mb-0">
+                You can accept, reject, or customise these optional purposes and change your decision at any time using
+                “Cookie settings” in the Website footer. Advertising click identifiers are retained only where the
+                relevant advertising consent has been granted.
+              </p>
+            </section>
+
+            <section className="mb-4">
+              <h2 className="h4">8. Service providers</h2>
+              <p className="mb-0">
+                We use service providers including Google Firebase for secure form processing and data hosting, Google
+                Analytics and Google Ads where consent is granted, and an email delivery provider for enquiry
+                notifications. Providers process data only for the relevant service and are subject to their contractual
+                and legal safeguards.
+              </p>
+            </section>
+
+            <section className="mb-4">
+              <h2 className="h4">9. Data Security Measures</h2>
               <p className="mb-0">
                 We implement appropriate technical and organisational measures to protect personal data, including
                 safeguards appropriate for financial and professional services information.
@@ -121,7 +145,7 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <section className="mb-4">
-              <h2 className="h4">8. Data Subject Rights</h2>
+              <h2 className="h4">10. Data Subject Rights</h2>
               <p className="mb-2">Under GDPR, you have the right to:</p>
               <ul className="mb-2">
                 <li>Access your personal data</li>
@@ -134,7 +158,7 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <section className="mb-4">
-              <h2 className="h4">9. Third-Party Websites</h2>
+              <h2 className="h4">11. Third-Party Websites</h2>
               <p className="mb-0">
                 This Website may contain links to external websites. XLW Advisory is not responsible for the content or
                 privacy practices of third-party websites.
@@ -142,7 +166,7 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <section className="mb-5">
-              <h2 className="h4">10. Updates to This Policy</h2>
+              <h2 className="h4">12. Updates to This Policy</h2>
               <p className="mb-0">
                 This Privacy Policy may be updated from time to time to reflect legal, regulatory, or operational changes.
                 Any updates will be published on this page with a revised date.

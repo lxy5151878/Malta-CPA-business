@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import ClientBoot from "@/components/ClientBoot";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import GoogleConsent from "@/components/GoogleConsent";
 import { localBusinessJsonLd, organizationJsonLd, siteUrl } from "@/lib/siteMeta";
 
 const GA_MEASUREMENT_ID = "G-6L6Z841W2D";
@@ -40,6 +41,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="/assets/site-overrides.css" />
 
         <Script src="/assets/theme-switcher.js" strategy="beforeInteractive" />
+        <Script id="google-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              analytics_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              wait_for_update: 500
+            });
+            gtag('set', 'ads_data_redaction', true);
+            gtag('set', 'url_passthrough', true);
+            try {
+              var savedConsent = JSON.parse(localStorage.getItem('xlw_consent_v1') || 'null');
+              if (savedConsent) {
+                gtag('consent', 'update', {
+                  analytics_storage: savedConsent.analytics ? 'granted' : 'denied',
+                  ad_storage: savedConsent.advertising ? 'granted' : 'denied',
+                  ad_user_data: savedConsent.advertising ? 'granted' : 'denied',
+                  ad_personalization: savedConsent.advertising ? 'granted' : 'denied'
+                });
+              }
+            } catch (error) {}
+          `}
+        </Script>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
@@ -49,7 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
+            gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: true });
           `}
         </Script>
       </head>
@@ -65,6 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         {children}
+        <GoogleConsent />
         <FloatingWhatsApp
           phone={process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "35699520938"}
           message="Hi! I'd like to book a free consultation."

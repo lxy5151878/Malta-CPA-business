@@ -2,6 +2,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
+import TrackedLink from "@/components/TrackedLink";
 import { getSiteCopy, type Lang } from "@/lib/siteCopy";
 
 export default function ContactPageView({ lang }: { lang: Lang }) {
@@ -68,15 +70,15 @@ export default function ContactPageView({ lang }: { lang: Lang }) {
                   <ul className="list-unstyled mb-0">
                     <li className="pb-1 mb-2">
                       <span className="d-block fs-sm text-body-secondary mb-1">{p.cards.phone.mainOffice}</span>
-                      <a className="nav-link fs-lg p-0" href={phoneHref}>
+                      <TrackedLink className="nav-link fs-lg p-0" href={phoneHref} eventName="click_to_call" eventLocation="contact_details">
                         {phoneDisplay}
-                      </a>
+                      </TrackedLink>
                     </li>
                     <li>
                       <span className="d-block fs-sm text-body-secondary mb-1">{p.cards.phone.whatsapp}</span>
-                      <a className="nav-link fs-lg p-0" href={whatsappHref} target="_blank" rel="noopener">
+                      <TrackedLink className="nav-link fs-lg p-0" href={whatsappHref} target="_blank" rel="noopener" eventName="whatsapp_click" eventLocation="contact_details">
                         {p.cards.phone.whatsappCta}
-                      </a>
+                      </TrackedLink>
                     </li>
                   </ul>
                 </div>
@@ -116,9 +118,9 @@ export default function ContactPageView({ lang }: { lang: Lang }) {
                   <ul className="list-unstyled mb-0">
                     <li className="pb-1 mb-2">
                       <span className="d-block fs-sm text-body-secondary mb-1">{p.cards.email.generalLabel}</span>
-                      <a className="nav-link fs-lg p-0" href={emailHref}>
+                      <TrackedLink className="nav-link fs-lg p-0" href={emailHref} eventName="email_click" eventLocation="contact_details">
                         {email}
-                      </a>
+                      </TrackedLink>
                     </li>
                     <li>
                       <span className="d-block fs-sm text-body-secondary mb-1">{p.cards.email.quickCallLabel}</span>
@@ -184,133 +186,7 @@ export default function ContactPageView({ lang }: { lang: Lang }) {
           </svg>
 
           <div className="card-body position-relative z-2 py-5">
-            <form className="mx-auto" style={{ maxWidth: 800 }} action="#" method="post">
-              <h2 className="h1 card-title text-center pb-4">{p.form.title}</h2>
-
-              <div className="row g-4">
-                <div className="col-sm-6">
-                  <label className="form-label fs-base" htmlFor="name">
-                    {p.form.fields.nameLabel}
-                  </label>
-                  <input
-                    className="form-control form-control-lg"
-                    type="text"
-                    placeholder={p.form.fields.namePlaceholder}
-                    required
-                    id="name"
-                    name="name"
-                  />
-                </div>
-
-                <div className="col-sm-6">
-                  <label className="form-label fs-base" htmlFor="company">
-                    {p.form.fields.companyLabel}
-                  </label>
-                  <input
-                    className="form-control form-control-lg"
-                    type="text"
-                    placeholder={p.form.fields.companyPlaceholder}
-                    id="company"
-                    name="company"
-                  />
-                </div>
-
-                <div className="col-sm-6">
-                  <label className="form-label fs-base" htmlFor="email">
-                    {p.form.fields.emailLabel}
-                  </label>
-                  <input
-                    className="form-control form-control-lg"
-                    type="email"
-                    placeholder={p.form.fields.emailPlaceholder}
-                    required
-                    id="email"
-                    name="email"
-                  />
-                </div>
-
-                <div className="col-sm-6">
-                  <label className="form-label fs-base" htmlFor="phone">
-                    {p.form.fields.phoneLabel}
-                  </label>
-                  <input
-                    className="form-control form-control-lg"
-                    type="text"
-                    placeholder={p.form.fields.phonePlaceholder}
-                    id="phone"
-                    name="phone"
-                  />
-                </div>
-
-                <div className="col-sm-12">
-                  <label className="form-label fs-base" htmlFor="service">
-                    {p.form.fields.serviceLabel}
-                  </label>
-                  <select
-                    className="form-select form-select-lg"
-                    id="service"
-                    name="service"
-                    defaultValue={p.form.fields.serviceDefault}
-                  >
-                    {p.form.fields.serviceOptions.map((o) => (
-                      <option key={o} value={o}>
-                        {o}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className="col-sm-12">
-                  <label className="form-label fs-base" htmlFor="message">
-                    {p.form.fields.messageLabel}
-                  </label>
-                  <textarea
-                    className="form-control form-control-lg"
-                    rows={6}
-                    placeholder={p.form.fields.messagePlaceholder}
-                    required
-                    id="message"
-                    name="message"
-                  />
-                </div>
-
-                <div className="col-sm-12">
-                  <div className="d-flex flex-wrap gap-3">
-                    {p.form.topics.map((t) => (
-                      <div className="form-check" key={t.id}>
-                        <input
-                          className="form-check-input"
-                          type="checkbox"
-                          id={t.id}
-                          name="topics"
-                          value={t.value}
-                          defaultChecked={t.defaultChecked}
-                        />
-                        <label className="form-check-label fs-base" htmlFor={t.id}>
-                          {t.label}
-                        </label>
-                      </div>
-                    ))}
-                  </div>
-
-                  <p className="fs-sm text-body mt-3 mb-0" style={{ opacity: 0.85 }}>
-                    {p.form.disclaimer}
-                  </p>
-                </div>
-
-                <div className="col-sm-12 text-center pt-4">
-                  <button className="btn btn-lg btn-light" type="submit">
-                    {p.form.submitLabel}
-                  </button>
-
-                  <div className="pt-3">
-                    <a className="btn btn-link text-white text-decoration-none" href={emailHref}>
-                      {p.form.orEmailPrefix} {email}
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <ContactForm copy={p.form} email={email} lang={lang} />
           </div>
         </div>
       </section>

@@ -1,3 +1,7 @@
+"use client";
+
+import { trackEvent } from "@/lib/analytics";
+
 // components/FloatingWhatsApp.tsx
 type Props = {
   /** Digits only, with country code. Example: "35699123456" */
@@ -17,6 +21,7 @@ export default function FloatingWhatsApp({ phone, message }: Props) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
+      onClick={() => trackEvent("whatsapp_click", { link_location: "floating_button" })}
       className="btn btn-success btn-icon btn-lg rounded-circle shadow position-fixed"
       style={{
         right: 18,

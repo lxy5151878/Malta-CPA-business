@@ -1,5 +1,6 @@
 import type { SiteCopy } from "@/lib/siteCopy";
 import CurrentYear from "@/components/CurrentYear";
+import CookieSettingsButton from "@/components/CookieSettingsButton";
 
 function SocialIcon({ kind }: { kind: string }) {
   // template uses around-icons (ai-*)
@@ -70,9 +71,12 @@ export default function Footer({ copy }: { copy: SiteCopy }) {
         </div>
 
         <div className="nav d-block d-md-flex align-items-center justify-content-between text-center text-md-start">
-          <a className="nav-link d-inline-block text-body-secondary fs-sm text-decoration-none order-md-2 py-1 px-0 mb-3 mb-md-0" href={f.privacy.href}>
-            {f.privacy.label}
-          </a>
+          <div className="d-flex flex-wrap justify-content-center gap-3 order-md-2 mb-3 mb-md-0">
+            <a className="nav-link d-inline-block text-body-secondary fs-sm text-decoration-none py-1 px-0" href={f.privacy.href}>
+              {f.privacy.label}
+            </a>
+            <CookieSettingsButton label={f.cookieSettingsLabel} />
+          </div>
 
           <p className="fs-sm order-md-1 mb-0">
             <span className="text-body-secondary">

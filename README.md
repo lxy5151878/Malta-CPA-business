@@ -31,7 +31,7 @@ The production export is generated in `out/`.
 No local Firebase login is required for this method.
 
 1. Push this repository to GitHub with `main` as the deployment branch.
-2. Open Firebase Console and select project `malta-business-partners`.
+2. Open Firebase Console and select project `accountantsmalta`.
 3. Go to **Hosting & Serverless > App Hosting** and choose **Create backend**.
 4. Connect the GitHub repository and grant the Firebase GitHub application access to it.
 5. Set the app root directory to `/` and the live branch to `main`.
@@ -46,10 +46,10 @@ This repository also contains a static Hosting configuration. After authenticati
 ```bash
 npm ci
 npm run build
-firebase deploy --only hosting
+firebase deploy --only hosting --project accountantsmalta
 ```
 
-`firebase.json` serves the generated `out/` directory and `.firebaserc` targets the `malta-business-partners` project.
+`firebase.json` serves the generated `out/` directory and `.firebaserc` targets the `accountantsmalta` project.
 
 ## Environment variables
 

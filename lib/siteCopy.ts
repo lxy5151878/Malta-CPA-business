@@ -441,6 +441,7 @@ const en = {
       { kind: "linkedin", label: "LinkedIn", href: "#" },
     ],
     privacy: { label: "Privacy policy", href: "/privacy-policy" },
+    cookieSettingsLabel: "Cookie settings",
     copyright: {
       prefix: "© All rights reserved. Made by",
       linkLabel: "XLW Advisory",
@@ -1627,7 +1628,11 @@ const en = {
   { id: "opt-other", value: "Other Services", label: "Other services", defaultChecked: false },
 ],
     disclaimer: "By submitting, you agree we may contact you about your enquiry.",
+    privacyAcknowledgement: "I have read and understand the",
+    privacyLinkLabel: "Privacy Policy",
     submitLabel: "Send a request",
+    submittingLabel: "Sending...",
+    errorMessage: "We could not send your request. Please try again or email us directly.",
     orEmailPrefix: "Or email us directly:",
   },
   map: {
@@ -1924,7 +1929,8 @@ const zh: SiteCopy = {
       { label: "博客", href: "#blog" },
       { label: "联系", href: "/zh/contact" },
     ],
-    privacy: { label: "隐私政策", href: "/privacy-policy" },
+    privacy: { label: "隐私政策", href: "/zh/privacy-policy" },
+    cookieSettingsLabel: "Cookie 设置",
     copyright: {
       prefix: "© 保留所有权利。制作：",
       linkLabel: "XLW Advisory",
@@ -2869,7 +2875,11 @@ const zh: SiteCopy = {
       { id: "opt-ai", value: "AI Automation", label: "AI 自动化", defaultChecked: false },
     ],
     disclaimer: "提交即表示您同意我们就本次咨询与您联系。",
+    privacyAcknowledgement: "我已阅读并理解",
+    privacyLinkLabel: "隐私政策",
     submitLabel: "提交请求",
+    submittingLabel: "正在提交…",
+    errorMessage: "暂时无法提交您的请求，请重试或直接发送邮件联系我们。",
     orEmailPrefix: "或直接电邮：",
   },
   map: {

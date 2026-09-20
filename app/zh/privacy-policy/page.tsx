@@ -20,7 +20,7 @@ export default function PrivacyPolicyZhPage() {
         {/* Header */}
         <div className="pt-3 pt-lg-4">
           <h1 className="display-6 mb-2">隐私政策</h1>
-          <p className="text-body-secondary mb-4">最后更新：2026 年 1 月</p>
+          <p className="text-body-secondary mb-4">最后更新：2026 年 9 月</p>
         </div>
 
         {/* Content */}
@@ -96,14 +96,32 @@ export default function PrivacyPolicyZhPage() {
             </section>
 
             <section className="mb-4">
-              <h2 className="h4">7. 数据安全措施</h2>
+              <h2 className="h4">7. 网站分析、广告与同意选择</h2>
+              <p className="mb-2">
+                网站使用必要技术记录您的隐私选择并保护咨询表单。经您同意后，Google Analytics 4
+                可用于衡量网站使用情况，Google Ads 可用于衡量广告效果。在您作出选择前，分析与广告存储均默认为拒绝。
+              </p>
+              <p className="mb-0">
+                您可以接受、拒绝或自定义这些可选用途，并可随时通过网站页脚的“Cookie 设置”更改决定。仅在取得相应广告同意后，我们才会保存广告点击标识。
+              </p>
+            </section>
+
+            <section className="mb-4">
+              <h2 className="h4">8. 服务提供商</h2>
+              <p className="mb-0">
+                我们使用 Google Firebase 安全处理表单和托管数据；在取得同意后使用 Google Analytics 与 Google Ads；并使用邮件发送服务商提供咨询通知。相关服务商仅为相应服务处理数据，并受合同与适用法律保障措施约束。
+              </p>
+            </section>
+
+            <section className="mb-4">
+              <h2 className="h4">9. 数据安全措施</h2>
               <p className="mb-0">
                 我们采取适当的技术与组织措施保护个人数据，包括适用于金融与专业服务信息的安全保障措施。
               </p>
             </section>
 
             <section className="mb-4">
-              <h2 className="h4">8. 数据主体权利</h2>
+              <h2 className="h4">10. 数据主体权利</h2>
               <p className="mb-2">根据 GDPR，您享有以下权利：</p>
               <ul className="mb-2">
                 <li>访问您的个人数据</li>
@@ -116,14 +134,14 @@ export default function PrivacyPolicyZhPage() {
             </section>
 
             <section className="mb-4">
-              <h2 className="h4">9. 第三方网站</h2>
+              <h2 className="h4">11. 第三方网站</h2>
               <p className="mb-0">
                 本网站可能包含指向外部网站的链接。XLW Advisory 不对第三方网站的内容或其隐私实践负责。
               </p>
             </section>
 
             <section className="mb-5">
-              <h2 className="h4">10. 本政策的更新</h2>
+              <h2 className="h4">12. 本政策的更新</h2>
               <p className="mb-0">
                 我们可能会不时更新本隐私政策，以反映法律、监管或运营变化。任何更新将发布在本页面，并更新相应日期。
               </p>
