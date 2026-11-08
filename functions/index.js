@@ -14,7 +14,7 @@ const notificationEmail = defineString("LEAD_NOTIFICATION_EMAIL", {
   default: "info@accountantsmalta.com",
 });
 const fromEmail = defineString("LEAD_FROM_EMAIL", {
-  default: "XLW Advisory Website <leads@accountantsmalta.com>",
+  default: "XLOU & ASSOCIATES Website <leads@accountantsmalta.com>",
 });
 const allowedOrigins = defineString("CONTACT_ALLOWED_ORIGINS", {
   default:
@@ -139,7 +139,7 @@ async function sendLeadEmail(leadId, lead) {
     subject: `New website enquiry: ${lead.service || "General enquiry"}`,
     idempotencyKey: `lead-notification/${leadId}`,
     htmlBody: `
-      <h2>New XLW Advisory website enquiry</h2>
+      <h2>New XLOU & ASSOCIATES website enquiry</h2>
       <p><strong>Reference:</strong> ${html(leadId)}</p>
       <p><strong>Name:</strong> ${html(lead.name)}</p>
       <p><strong>Company:</strong> ${html(lead.company || "Not supplied")}</p>
@@ -152,7 +152,7 @@ async function sendLeadEmail(leadId, lead) {
       <p>${html(lead.message).replaceAll("\n", "<br>")}</p>
     `,
     textBody: [
-      "New XLW Advisory website enquiry",
+      "New XLOU & ASSOCIATES website enquiry",
       `Reference: ${leadId}`,
       `Name: ${lead.name}`,
       `Company: ${lead.company || "Not supplied"}`,
@@ -169,7 +169,9 @@ async function sendLeadEmail(leadId, lead) {
 
 async function sendCustomerAcknowledgement(leadId, lead) {
   const isChinese = lead.lang === "zh";
-  const subject = isChinese ? "感谢您联系 XLW Advisory" : "Thank you for contacting XLW Advisory";
+  const subject = isChinese
+    ? "感谢您联系 XLOU & ASSOCIATES"
+    : "Thank you for contacting XLOU & ASSOCIATES";
   const service = lead.service || (isChinese ? "一般咨询" : "General enquiry");
 
   return sendEmail({
@@ -179,22 +181,22 @@ async function sendCustomerAcknowledgement(leadId, lead) {
     idempotencyKey: `lead-acknowledgement/${leadId}`,
     htmlBody: isChinese
       ? `
-        <h2>感谢您联系 XLW Advisory</h2>
+        <h2>感谢您联系 XLOU & ASSOCIATES</h2>
         <p>${html(lead.name)}，您好：</p>
         <p>我们已经收到您的咨询。团队将审核相关信息，并尽快与您联系。</p>
         <p><strong>咨询编号：</strong>${html(leadId)}</p>
         <p><strong>服务类别：</strong>${html(service)}</p>
         <p>如需补充资料，请直接回复本邮件。</p>
-        <p>XLW Advisory</p>
+        <p>XLOU & ASSOCIATES</p>
       `
       : `
-        <h2>Thank you for contacting XLW Advisory</h2>
+        <h2>Thank you for contacting XLOU & ASSOCIATES</h2>
         <p>Dear ${html(lead.name)},</p>
         <p>We have received your enquiry. Our team will review the information and contact you as soon as possible.</p>
         <p><strong>Reference:</strong> ${html(leadId)}</p>
         <p><strong>Service:</strong> ${html(service)}</p>
         <p>If you need to add any information, please reply directly to this email.</p>
-        <p>XLW Advisory</p>
+        <p>XLOU & ASSOCIATES</p>
       `,
     textBody: isChinese
       ? [
@@ -205,7 +207,7 @@ async function sendCustomerAcknowledgement(leadId, lead) {
           `服务类别：${service}`,
           "",
           "如需补充资料，请直接回复本邮件。",
-          "XLW Advisory",
+          "XLOU & ASSOCIATES",
         ].join("\n")
       : [
           `Dear ${lead.name},`,
@@ -215,7 +217,7 @@ async function sendCustomerAcknowledgement(leadId, lead) {
           `Service: ${service}`,
           "",
           "If you need to add any information, please reply directly to this email.",
-          "XLW Advisory",
+          "XLOU & ASSOCIATES",
         ].join("\n"),
   });
 }

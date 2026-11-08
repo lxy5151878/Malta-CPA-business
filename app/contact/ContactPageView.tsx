@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import TrackedLink from "@/components/TrackedLink";
 import { getSiteCopy, type Lang } from "@/lib/siteCopy";
+import { companyMeta } from "@/lib/siteMeta";
 
 export default function ContactPageView({ lang }: { lang: Lang }) {
   const copy = getSiteCopy(lang);
@@ -54,7 +55,7 @@ export default function ContactPageView({ lang }: { lang: Lang }) {
                     <br />
                     {p.details.address.line2}
                   </p>
-                  <a className="btn btn-sm btn-outline-primary" href="https://maps.app.goo.gl/ZuNG9cgLewXqKP5N8" target="_blank" rel="noopener noreferrer">
+                  <a className="btn btn-sm btn-outline-primary" href={companyMeta.mapUrl} target="_blank" rel="noopener noreferrer">
                     <i className="ai-map-pin me-1"></i>
                     {p.cards.address.ctaMap}
                   </a>
@@ -208,7 +209,7 @@ export default function ContactPageView({ lang }: { lang: Lang }) {
 
       <div className="ratio ratio-21x9 rounded-4 overflow-hidden mt-4 bg-light">
         <iframe
-          src="https://www.google.com/maps?q=San+M.+Kolbe,+St.+Paul%27s+Bay,+Malta&output=embed"
+          src={companyMeta.mapEmbedUrl}
           width="600"
           height="450"
           style={{ border: 0 }}
@@ -216,7 +217,11 @@ export default function ContactPageView({ lang }: { lang: Lang }) {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           className="w-100 h-100"
-          title="XLW Advisory at San M. Kolbe, St. Paul's Bay"
+          title={
+            lang === "zh"
+              ? "XLOU & ASSOCIATES，Triq San Massimiljanu Kolbe，圣保罗湾"
+              : "XLOU & ASSOCIATES on Triq San Massimiljanu Kolbe, St Paul's Bay"
+          }
         />
       </div>
     </div>

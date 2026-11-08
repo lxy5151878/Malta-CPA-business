@@ -5,7 +5,7 @@ export default function CookieSettingsButton({ label }: { label: string }) {
     <button
       className="nav-link d-inline-block text-body-secondary fs-sm text-decoration-none border-0 bg-transparent py-1 px-0"
       type="button"
-      onClick={() => window.xlwOpenCookieSettings?.()}
+      onClick={() => window.openCookieSettings?.()}
     >
       {label}
     </button>

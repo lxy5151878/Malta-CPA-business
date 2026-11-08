@@ -21,13 +21,13 @@ type GrowthPage = {
 const en: Record<GrowthPageKey, GrowthPage> = {
   mprp: {
     meta: {
-      title: "Malta Permanent Residence Programme (MPRP) | XLW Advisory",
+      title: "Malta Permanent Residence Programme (MPRP) | XLOU & ASSOCIATES",
       description: "MPRP readiness, financial-document coordination and due diligence support for eligible non-EU, non-EEA and non-Swiss applicants.",
     },
     eyebrow: "Malta residence planning",
     title: "Malta Permanent Residence Programme",
     lead: "A coordinated route from initial eligibility review to a complete, traceable financial and due diligence file, working alongside an authorised MPRP Licensed Agent.",
-    notice: "MPRP applications must be submitted through a Licensed Agent. XLW Advisory provides accounting, financial-document and due diligence support and does not promise approval.",
+    notice: "MPRP applications must be submitted through a Licensed Agent. XLOU & ASSOCIATES provides accounting, financial-document and due diligence support and does not promise approval.",
     highlights: [
       { value: "Permanent", label: "residence status, subject to approval and ongoing conditions" },
       { value: "4 generations", label: "may be included where dependency rules are met" },
@@ -72,7 +72,7 @@ const en: Record<GrowthPageKey, GrowthPage> = {
   },
   greeceGoldenVisa: {
     meta: {
-      title: "Greece Golden Visa Advisory Support | XLW Advisory",
+      title: "Greece Golden Visa Advisory Support | XLOU & ASSOCIATES",
       description: "Financial readiness, investment-file coordination and due diligence support for Greece Golden Visa applicants.",
     },
     eyebrow: "Greece residence-by-investment",
@@ -123,7 +123,7 @@ const en: Record<GrowthPageKey, GrowthPage> = {
   },
   dueDiligence: {
     meta: {
-      title: "Due Diligence and Compliance File Service | XLW Advisory",
+      title: "Due Diligence and Compliance File Service | XLOU & ASSOCIATES",
       description: "A structured CDD, source-of-wealth and document-readiness service for investors, founders, advisers and regulated onboarding.",
     },
     eyebrow: "Special service",
@@ -176,11 +176,11 @@ const en: Record<GrowthPageKey, GrowthPage> = {
 const zh: Record<GrowthPageKey, GrowthPage> = {
   mprp: {
     ...en.mprp,
-    meta: { title: "马耳他永久居留计划 MPRP | XLW Advisory", description: "为符合条件的非欧盟申请人提供 MPRP 财务资料、资金来源和尽职调查准备支持。" },
+    meta: { title: "马耳他永久居留计划 MPRP | XLOU & ASSOCIATES", description: "为符合条件的非欧盟申请人提供 MPRP 财务资料、资金来源和尽职调查准备支持。" },
     eyebrow: "马耳他居留规划",
     title: "马耳他永久居留计划 MPRP",
     lead: "从初步条件判断，到建立完整、可追溯的财务与尽调资料包，并与获授权的 MPRP Licensed Agent 协同推进。",
-    notice: "MPRP 必须通过获授权的 Licensed Agent 提交。XLW Advisory 提供会计、财务资料与尽调支持，不承诺申请结果。",
+    notice: "MPRP 必须通过获授权的 Licensed Agent 提交。XLOU & ASSOCIATES 提供会计、财务资料与尽调支持，不承诺申请结果。",
     highlights: [
       { value: "永久居留", label: "以获批并持续满足项目条件为前提" },
       { value: "四代家庭", label: "符合受养人规则时可纳入同一申请" },
@@ -203,7 +203,7 @@ const zh: Record<GrowthPageKey, GrowthPage> = {
   },
   greeceGoldenVisa: {
     ...en.greeceGoldenVisa,
-    meta: { title: "希腊 Golden Visa 支持 | XLW Advisory", description: "为希腊 Golden Visa 投资人提供财务准备、投资资料协调和尽职调查支持。" },
+    meta: { title: "希腊 Golden Visa 支持 | XLOU & ASSOCIATES", description: "为希腊 Golden Visa 投资人提供财务准备、投资资料协调和尽职调查支持。" },
     eyebrow: "希腊投资居留",
     title: "希腊 Golden Visa",
     lead: "为通过合资格投资途径申请希腊居留许可的投资人，提供财务准备与跨境资料协调。",
@@ -230,7 +230,7 @@ const zh: Record<GrowthPageKey, GrowthPage> = {
   },
   dueDiligence: {
     ...en.dueDiligence,
-    meta: { title: "尽职调查与资料合规服务 | XLW Advisory", description: "为投资人、创始人、专业顾问和受监管机构建立结构化 CDD、财富来源和资料准备服务。" },
+    meta: { title: "尽职调查与资料合规服务 | XLOU & ASSOCIATES", description: "为投资人、创始人、专业顾问和受监管机构建立结构化 CDD、财富来源和资料准备服务。" },
     eyebrow: "特别服务",
     title: "以证据为核心的尽职调查",
     lead: "把分散的身份、持股、业务与财务记录，整理成专业顾问、银行和交易对手能够高效审核的合规资料包。",

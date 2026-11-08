@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 import { getSiteCopy } from "@/lib/siteCopy";
 
 export const metadata: Metadata = {
-  title: "隐私政策 | XLW Advisory",
-  description: "XLW Advisory 隐私政策：了解我们如何依据 GDPR 收集、使用、保护与保存个人数据。",
+  title: "隐私政策 | XLOU & ASSOCIATES",
+  description: "XLOU & ASSOCIATES 隐私政策：了解我们如何依据 GDPR 收集、使用、保护与保存个人数据。",
 };
 
 export default function PrivacyPolicyZhPage() {
@@ -29,7 +29,7 @@ export default function PrivacyPolicyZhPage() {
             <section className="mb-4">
               <h2 className="h4">1. 简介</h2>
               <p className="mb-0">
-                XLW Advisory 是一家提供会计、审计与鉴证、税务及咨询服务的专业服务机构。我们致力于保护通过本网站（“网站”）处理的个人数据的机密性、完整性与安全性。
+                XLOU & ASSOCIATES 是一家提供会计、审计与鉴证、税务及咨询服务的专业服务机构。我们致力于保护通过本网站（“网站”）处理的个人数据的机密性、完整性与安全性。
               </p>
               <p className="mt-3 mb-0">
                 我们依据《通用数据保护条例》（欧盟）2016/679（“GDPR”）以及适用的专业与监管义务处理所有个人数据。
@@ -67,7 +67,7 @@ export default function PrivacyPolicyZhPage() {
             <section className="mb-4">
               <h2 className="h4">4. 专业保密义务</h2>
               <p className="mb-0">
-                作为专业咨询机构，XLW Advisory 受严格的职业道德与保密义务约束。在会计、审计、税务或咨询服务过程中收到的任何个人数据，均会以更高标准保密，并仅在合法的专业目的范围内进行处理。
+                作为专业咨询机构，XLOU & ASSOCIATES 受严格的职业道德与保密义务约束。在会计、审计、税务或咨询服务过程中收到的任何个人数据，均会以更高标准保密，并仅在合法的专业目的范围内进行处理。
               </p>
             </section>
 
@@ -83,7 +83,7 @@ export default function PrivacyPolicyZhPage() {
 
             <section className="mb-4">
               <h2 className="h4">6. 数据共享与跨境传输</h2>
-              <p className="mb-2">XLW Advisory 不出售或以商业方式利用个人数据。</p>
+              <p className="mb-2">XLOU & ASSOCIATES 不出售或以商业方式利用个人数据。</p>
               <p className="mb-2">仅在以下情况下才可能披露个人数据：</p>
               <ul className="mb-2">
                 <li>法律、法院命令或监管机构要求</li>
@@ -136,7 +136,7 @@ export default function PrivacyPolicyZhPage() {
             <section className="mb-4">
               <h2 className="h4">11. 第三方网站</h2>
               <p className="mb-0">
-                本网站可能包含指向外部网站的链接。XLW Advisory 不对第三方网站的内容或其隐私实践负责。
+                本网站可能包含指向外部网站的链接。XLOU & ASSOCIATES 不对第三方网站的内容或其隐私实践负责。
               </p>
             </section>
 

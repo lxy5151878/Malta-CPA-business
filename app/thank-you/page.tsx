@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import ThankYouPage from "@/components/ThankYouPage";
 
 export const metadata: Metadata = {
-  title: "Thank you | XLW Advisory",
-  description: "Your enquiry has been submitted to XLW Advisory.",
+  title: "Thank you | XLOU & ASSOCIATES",
+  description: "Your enquiry has been submitted to XLOU & ASSOCIATES.",
   robots: { index: false, follow: false },
 };
 

@@ -32,14 +32,14 @@ type FeatureBlock =
 // ✅ 1) EN is source of truth
 const en = {
   site: {
-    name: "XLW Advisory",
-    slogan: "Trustworthy | Focus | Vision | Compliance",
+    name: "XLOU & ASSOCIATES",
+    slogan: "Trust | Focus | Foresight | Compliance",
     founderStatement:
-      "XLW Advisory was founded by Mr. Xiaoyang Lou and his partners. Mr. Lou is a licensed CPA and practising auditor with warrant number 121145. Together with his associates, the firm works with clients to support growth, success, and compliant business operations.",
+      "XLOU & ASSOCIATES is led by Mr. Lou Xiaoyang, a licensed CPA and practising auditor with warrant number 121145. He and his associates support clients with clear, compliant accounting, audit, tax and cross-border advisory services.",
   },
 
   navbar: {
-    brand: { label: "XLW Advisory", href: "/" },
+    brand: { label: "XLOU & ASSOCIATES", href: "/" },
     login: { label: "Login", href: "https://mgt.accountantsmalta.com" },
     cta: { label: "Contact us", href: "/contact" },
     items: [
@@ -98,7 +98,7 @@ const en = {
     primaryCta: { label: "Book a free consultation", href: "/contact" },
     phone: { label: "+356 9952 0938", href: "tel:+35699520938" },
     bullets: ["Full spectrum of services", "Flexible work terms"],
-    backgroundImage: "/assets/hero-bg.jpg",
+    backgroundImage: "/assets/generated/xlou-valletta-hero-v2.png",
   },
 
   services: {
@@ -272,7 +272,7 @@ const en = {
         role: "Director",
         headline: "Clear numbers, faster decisions, efficient services — exactly what we needed.",
         text:
-          "XLW Advisory helped us clean up reporting, align finance processes, and build confidence across the team. The support is proactive and easy to work with.",
+          "XLOU & ASSOCIATES helped us clean up reporting, align finance processes, and build confidence across the team. The support is proactive and easy to work with.",
       },
       {
         name: "Robert Liu",
@@ -299,16 +299,6 @@ const en = {
     cta: { label: "About us", href: "/about-us" },
     members: [
       {
-        name: "Jie Weng",
-        role: "Client Success Lead",
-        image: "/assets/generated/team-jie.svg",
-        socials: [
-          { kind: "facebook", label: "Facebook", href: "#" },
-          { kind: "x", label: "X", href: "#" },
-          { kind: "linkedin", label: "LinkedIn", href: "#" },
-        ],
-      },
-      {
         name: "Yixin QI",
         role: "Fund Promoter",
         image: "/assets/generated/team-yixin.svg",
@@ -329,16 +319,6 @@ const en = {
         ],
       },
       {
-        name: "Albert Parker",
-        role: "Partner",
-        image: "/assets/generated/team-albert.svg",
-        socials: [
-          { kind: "facebook", label: "Facebook", href: "#" },
-          { kind: "behance", label: "Behance", href: "#" },
-          { kind: "dribbble", label: "Dribbble", href: "#" },
-        ],
-      },
-      {
         name: "Shawn Lou",
         role: "Managing Partner",
         image: "/assets/generated/team-shawn.svg",
@@ -355,11 +335,11 @@ const en = {
     id: "blog",
     title: "Malta Knowledge Center",
     featured: {
-      title: "Malta Annual Return Guide: Filing Duties, Risks and Practical Controls",
+      title: "Malta Budget 2027: Tax, Business and Cost-of-Living Measures",
       excerpt:
-        "A practical guide to building clean bookkeeping, predictable reporting, and decision-ready dashboards — without slowing down execution.",
-      image: "/assets/03.jpg",
-      href: "/knowledge/malta-annual-return-guide",
+        "A practical, source-checked guide to the proposed 25% small-company rate, family tax bands, COLA, tourism charges and compliance reforms.",
+      image: "/assets/generated/malta-budget-2027-hero.png",
+      href: "/knowledge/malta-budget-2027-key-measures",
     },
     items: [
       {
@@ -444,7 +424,7 @@ const en = {
     cookieSettingsLabel: "Cookie settings",
     copyright: {
       prefix: "© All rights reserved. Made by",
-      linkLabel: "XLW Advisory",
+      linkLabel: "XLOU & ASSOCIATES",
       linkHref: "#top",
     },
   },
@@ -488,19 +468,19 @@ const en = {
       // portal: {
       //   title: "The Vacei Portal – Built for Our Clients",
       //   body:
-      //     "Every XLW Advisory client gets access to the Vacei Portal, our secure online platform that makes working with us seamless and transparent.",
+      //     "Every XLOU & ASSOCIATES client gets access to the Vacei Portal, our secure online platform that makes working with us seamless and transparent.",
       //   featuresLabel: "Key Features",
       //   features: [
       //     "Secure document uploads",
       //     "Real-time progress tracking",
       //     "Online e-signatures",
-      //     "Direct communication with your XLW Advisory team",
+      //     "Direct communication with your XLOU & ASSOCIATES team",
       //   ],
       // },
       benefits: {
-        title: "Great benefits from XLW Advisory.",
+        title: "Great benefits from XLOU & ASSOCIATES.",
         body:
-          "XLW Advisory offers a wide range of services, experienced professionals, personalized approach, and access to international resources...",
+          "XLOU & ASSOCIATES offers a wide range of services, experienced professionals, personalized approach, and access to international resources...",
         items: [
           "Personalized approach",
           "Quick turnaround times",
@@ -515,7 +495,7 @@ const en = {
       personalized: {
         title: "Need a personalized solution?",
         body:
-          "An accounting and audit firm, such as XLW Advisory, can provide a range of services that are tailored to the specific needs of each client...",
+          "An accounting and audit firm, such as XLOU & ASSOCIATES, can provide a range of services that are tailored to the specific needs of each client...",
         ctaPrimary: "Contact us",
         ctaSecondary: "Call now",
       },
@@ -536,7 +516,7 @@ const en = {
 
     taxServices: {
       meta: {
-      title: "Tax Services | XLW Advisory",
+      title: "Tax Services | XLOU & ASSOCIATES",
       description:
         "Expert assistance for compliance and maximization of savings. Tax preparation, planning, audit representation, international taxation, VAT support, and more.",
     },
@@ -621,20 +601,20 @@ const en = {
     // portal: {
     //   title: "The Vacei Portal – Built for Our Clients",
     //   body:
-    //     "Every XLW Advisory client gets access to the Vacei Portal, our secure online platform that makes working with us seamless and transparent. Upload documents, track the progress of your engagement, sign electronically, and communicate directly with your team — all in one place.",
+    //     "Every XLOU & ASSOCIATES client gets access to the Vacei Portal, our secure online platform that makes working with us seamless and transparent. Upload documents, track the progress of your engagement, sign electronically, and communicate directly with your team — all in one place.",
     //   featuresLabel: "Key Features",
     //   features: [
     //     "Secure document uploads",
     //     "Real-time progress tracking",
     //     "Online e-signatures",
-    //     "Direct communication with your XLW Advisory team",
+    //     "Direct communication with your XLOU & ASSOCIATES team",
     //   ],
     //},
 
     benefits: {
-      title: "Great benefits from XLW Advisory.",
+      title: "Great benefits from XLOU & ASSOCIATES.",
       body:
-        "XLW Advisory offers a wide range of services, experienced professionals, personalized approach, and access to international resources, competitive pricing, quick turnaround times, transparent communication, flexibility, and reliability that ensures you have the most current and accurate financial information for your business.",
+        "XLOU & ASSOCIATES offers a wide range of services, experienced professionals, personalized approach, and access to international resources, competitive pricing, quick turnaround times, transparent communication, flexibility, and reliability that ensures you have the most current and accurate financial information for your business.",
       items: [
         "Personalized approach",
         "Quick turnaround times",
@@ -650,7 +630,7 @@ const en = {
     personalized: {
       title: "Need a personalized solution?",
       body:
-        "An accounting and audit firm, such as XLW Advisory, can provide a range of services that are tailored to the specific needs of each client. The firm’s team of experts can work with clients to understand their unique business operations and financial goals and then design a customized solution that addresses their specific needs. Services that can be tailored to individual clients.",
+        "An accounting and audit firm, such as XLOU & ASSOCIATES, can provide a range of services that are tailored to the specific needs of each client. The firm’s team of experts can work with clients to understand their unique business operations and financial goals and then design a customized solution that addresses their specific needs. Services that can be tailored to individual clients.",
       ctaPrimary: "Contact us",
       ctaSecondary: "Call now",
     },
@@ -681,7 +661,7 @@ const en = {
 
     auditAndAssurance: {
   meta: {
-    title: "Audit & Assurance | XLW Advisory",
+    title: "Audit & Assurance | XLOU & ASSOCIATES",
     description:
       "Audit and Assurance services: financial statement audit, internal audit, compliance audit, and risk management audit. Confidence in reporting and stronger processes.",
   },
@@ -771,20 +751,20 @@ const en = {
   // portal: {
   //   title: "The Vacei Portal – Built for Our Clients",
   //   body:
-  //     "Every XLW Advisory client gets access to the Vacei Portal, our secure online platform that makes working with us seamless and transparent. Upload documents, track the progress of your engagement, sign electronically, and communicate directly with your team — all in one place.",
+  //     "Every XLOU & ASSOCIATES client gets access to the Vacei Portal, our secure online platform that makes working with us seamless and transparent. Upload documents, track the progress of your engagement, sign electronically, and communicate directly with your team — all in one place.",
   //   featuresLabel: "Key Features",
   //   features: [
   //     "Secure document uploads",
   //     "Real-time progress tracking",
   //     "Online e-signatures",
-  //     "Direct communication with your XLW Advisory team",
+  //     "Direct communication with your XLOU & ASSOCIATES team",
   //   ],
   //},
 
   benefits: {
-    title: "Great benefits from XLW Advisory.",
+    title: "Great benefits from XLOU & ASSOCIATES.",
     body:
-      "XLW Advisory offers a wide range of services, experienced professionals, personalized approach, and access to international resources, competitive pricing, quick turnaround times, transparent communication, flexibility, and reliability that ensures you have the most current and accurate financial information for your business.",
+      "XLOU & ASSOCIATES offers a wide range of services, experienced professionals, personalized approach, and access to international resources, competitive pricing, quick turnaround times, transparent communication, flexibility, and reliability that ensures you have the most current and accurate financial information for your business.",
     items: [
       "Personalized approach",
       "Quick turnaround times",
@@ -800,7 +780,7 @@ const en = {
   personalized: {
     title: "Need a personalized solution?",
     body:
-      "An accounting and audit firm, such as XLW Advisory, can provide a range of services that are tailored to the specific needs of each client. The firm’s team of experts can work with clients to understand their unique business operations and financial goals and then design a customized solution that addresses their specific needs. Services that can be tailored to individual clients.",
+      "An accounting and audit firm, such as XLOU & ASSOCIATES, can provide a range of services that are tailored to the specific needs of each client. The firm’s team of experts can work with clients to understand their unique business operations and financial goals and then design a customized solution that addresses their specific needs. Services that can be tailored to individual clients.",
     ctaPrimary: "Contact us",
     ctaSecondary: "Call now",
   },
@@ -831,7 +811,7 @@ const en = {
 
     bookkeeping: {
       meta: {
-        title: "Bookkeeping Services | XLW Advisory",
+        title: "Bookkeeping Services | XLOU & ASSOCIATES",
         description:
           "Bookkeeping Services: precision for your financial foundation. Accounts payable/receivable, bank reconciliation, financial record maintenance, and general ledger management.",
       },
@@ -842,7 +822,7 @@ const en = {
         heading: "Bookkeeping",
         subheading: "Precision for Your Financial Foundation",
         intro:
-          "At XLW Advisory, we understand that accurate bookkeeping is the cornerstone of a well-managed business. Our bookkeeping services are designed to ensure that every financial transaction is recorded correctly and efficiently, providing you with clear and actionable financial insights. We handle the details, so you can focus on growing your business with confidence, knowing your records are accurate and up-to-date.",
+          "At XLOU & ASSOCIATES, we understand that accurate bookkeeping is the cornerstone of a well-managed business. Our bookkeeping services are designed to ensure that every financial transaction is recorded correctly and efficiently, providing you with clear and actionable financial insights. We handle the details, so you can focus on growing your business with confidence, knowing your records are accurate and up-to-date.",
         callout: {
           kicker: "Service Focus",
           badge: "Bookkeeping",
@@ -883,7 +863,7 @@ const en = {
           },
         ],
         closingNote:
-          "Our team at XLW Advisory is here to support your business with the highest standard of bookkeeping expertise, allowing you to make informed decisions based on reliable financial data.",
+          "Our team at XLOU & ASSOCIATES is here to support your business with the highest standard of bookkeeping expertise, allowing you to make informed decisions based on reliable financial data.",
       },
 
       industries: {
@@ -906,20 +886,20 @@ const en = {
       // portal: {
       //   title: "The Vacei Portal – Built for Our Clients",
       //   body:
-      //     "Every XLW Advisory client gets access to the Vacei Portal, our secure online platform that makes working with us seamless and transparent. Upload documents, track the progress of your engagement, sign electronically, and communicate directly with your team — all in one place.",
+      //     "Every XLOU & ASSOCIATES client gets access to the Vacei Portal, our secure online platform that makes working with us seamless and transparent. Upload documents, track the progress of your engagement, sign electronically, and communicate directly with your team — all in one place.",
       //   featuresTitle: "Key Features:",
       //   features: [
       //     "Secure document uploads",
       //     "Real-time progress tracking",
       //     "Online e-signatures",
-      //     "Direct communication with your XLW Advisory team",
+      //     "Direct communication with your XLOU & ASSOCIATES team",
       //   ],
       //},
 
       benefits: {
-        title: "Great benefits from XLW Advisory.",
+        title: "Great benefits from XLOU & ASSOCIATES.",
         body:
-          "XLW Advisory offers a wide range of services, experienced professionals, personalized approach, and access to international resources, competitive pricing, quick turnaround times, transparent communication, flexibility, and reliability that ensures you have the most current and accurate financial information for your business.",
+          "XLOU & ASSOCIATES offers a wide range of services, experienced professionals, personalized approach, and access to international resources, competitive pricing, quick turnaround times, transparent communication, flexibility, and reliability that ensures you have the most current and accurate financial information for your business.",
         items: [
           "Personalized approach",
           "Quick turnaround times",
@@ -935,14 +915,14 @@ const en = {
       personalized: {
         title: "Need a personalized solution?",
         body:
-          "An accounting and audit firm, such as XLW Advisory, can provide a range of services that are tailored to the specific needs of each client. The firm’s team of experts can work with clients to understand their unique business operations and financial goals and then design a customized solution that addresses their specific needs. Services that can be tailored to individual clients.",
+          "An accounting and audit firm, such as XLOU & ASSOCIATES, can provide a range of services that are tailored to the specific needs of each client. The firm’s team of experts can work with clients to understand their unique business operations and financial goals and then design a customized solution that addresses their specific needs. Services that can be tailored to individual clients.",
         ctaEmail: "Email us",
       },
     },
 
     payroll: {
     meta: {
-      title: "Payroll Services | XLW Advisory",
+      title: "Payroll Services | XLOU & ASSOCIATES",
       description:
         "Payroll Services: managing employee compensation and taxes. Employee data management, payroll processing, compliance & reporting, time and attendance tracking.",
     },
@@ -1045,20 +1025,20 @@ const en = {
     // portal: {
     //   title: "The Vacei Portal – Built for Our Clients",
     //   body:
-    //     "Every XLW Advisory client gets access to the Vacei Portal, our secure online platform that makes working with us seamless and transparent. Upload documents, track the progress of your engagement, sign electronically, and communicate directly with your team — all in one place.",
+    //     "Every XLOU & ASSOCIATES client gets access to the Vacei Portal, our secure online platform that makes working with us seamless and transparent. Upload documents, track the progress of your engagement, sign electronically, and communicate directly with your team — all in one place.",
     //   featuresTitle: "Key Features:",
     //   features: [
     //     "Secure document uploads",
     //     "Real-time progress tracking",
     //     "Online e-signatures",
-    //     "Direct communication with your XLW Advisory team",
+    //     "Direct communication with your XLOU & ASSOCIATES team",
     //   ],
     //},
 
     benefits: {
-      title: "Great benefits from XLW Advisory.",
+      title: "Great benefits from XLOU & ASSOCIATES.",
       body:
-        "XLW Advisory offers a wide range of services, experienced professionals, personalized approach, and access to international resources, competitive pricing, quick turnaround times, transparent communication, flexibility, and reliability that ensures you have the most current and accurate financial information for your business.",
+        "XLOU & ASSOCIATES offers a wide range of services, experienced professionals, personalized approach, and access to international resources, competitive pricing, quick turnaround times, transparent communication, flexibility, and reliability that ensures you have the most current and accurate financial information for your business.",
       items: [
         "Personalized approach",
         "Quick turnaround times",
@@ -1096,14 +1076,14 @@ const en = {
     personalized: {
       title: "Need a personalized solution?",
       body:
-        "An accounting and audit firm, such as XLW Advisory, can provide a range of services that are tailored to the specific needs of each client. The firm’s team of experts can work with clients to understand their unique business operations and financial goals and then design a customized solution that addresses their specific needs. Services that can be tailored to individual clients.",
+        "An accounting and audit firm, such as XLOU & ASSOCIATES, can provide a range of services that are tailored to the specific needs of each client. The firm’s team of experts can work with clients to understand their unique business operations and financial goals and then design a customized solution that addresses their specific needs. Services that can be tailored to individual clients.",
       ctaEmail: "Email us",
     },
     },
 
     liquidation: {
       meta: {
-        title: "Liquidation Services | XLW Advisory",
+        title: "Liquidation Services | XLOU & ASSOCIATES",
         description:
           "Liquidation Services: assisting companies in the winding down of business. Asset liquidation, creditor/shareholder distribution, bankruptcy filing support, and voluntary liquidation guidance.",
       },
@@ -1173,14 +1153,14 @@ const en = {
       // portal: {
       //   title: "The Vacei Portal – Built for Our Clients",
       //   body:
-      //     "Every XLW Advisory client gets access to the Vacei Portal, our secure online platform that makes working with us seamless and transparent. Upload documents, track the progress of your engagement, sign electronically, and communicate directly with your team — all in one place.",
+      //     "Every XLOU & ASSOCIATES client gets access to the Vacei Portal, our secure online platform that makes working with us seamless and transparent. Upload documents, track the progress of your engagement, sign electronically, and communicate directly with your team — all in one place.",
       //   featuresTitle: "Key Features:",
-      //   features: ["Secure document uploads", "Real-time progress tracking", "Online e-signatures", "Direct communication with your XLW Advisory team"],
+      //   features: ["Secure document uploads", "Real-time progress tracking", "Online e-signatures", "Direct communication with your XLOU & ASSOCIATES team"],
       // },
       benefits: {
-        title: "Great benefits from XLW Advisory.",
+        title: "Great benefits from XLOU & ASSOCIATES.",
         body:
-          "XLW Advisory offers a wide range of services, experienced professionals, personalized approach, and access to international resources, competitive pricing, quick turnaround times, transparent communication, flexibility, and reliability that ensures you have the most current and accurate financial information for your business.",
+          "XLOU & ASSOCIATES offers a wide range of services, experienced professionals, personalized approach, and access to international resources, competitive pricing, quick turnaround times, transparent communication, flexibility, and reliability that ensures you have the most current and accurate financial information for your business.",
         items: ["Personalized approach", "Quick turnaround times", "Transparent communication", "Flexibility", "Reliability", "Technology-driven", "Proactive advice", "AI Specialized"],
       },
       related: {
@@ -1207,14 +1187,14 @@ const en = {
       personalized: {
         title: "Need a personalized solution?",
         body:
-          "An accounting and audit firm, such as XLW Advisory, can provide a range of services that are tailored to the specific needs of each client. The firm’s team of experts can work with clients to understand their unique business operations and financial goals and then design a customized solution that addresses their specific needs. Services that can be tailored to individual clients.",
+          "An accounting and audit firm, such as XLOU & ASSOCIATES, can provide a range of services that are tailored to the specific needs of each client. The firm’s team of experts can work with clients to understand their unique business operations and financial goals and then design a customized solution that addresses their specific needs. Services that can be tailored to individual clients.",
         ctaEmail: "Email us",
       },
     },
 
     industries: {
     meta: {
-      title: "Industries | XLW Advisory",
+      title: "Industries | XLOU & ASSOCIATES",
       description:
         "Industries we serve in Malta: Private Clients, Entrepreneurs, and Professional Firms — plus sector-focused support across tourism & yachting, tech, healthcare, real estate, e-commerce, and education.",
     },
@@ -1373,9 +1353,9 @@ const en = {
 
     aboutUs: {
   meta: {
-    title: "About us | XLW Advisory",
+    title: "About us | XLOU & ASSOCIATES",
     description:
-      "About XLW Advisory: a Malta-based professional services firm specializing in accounting, audit, tax, and technology-led finance operations with AI and automation.",
+      "About XLOU & ASSOCIATES: a Malta-based professional services firm specializing in accounting, audit, tax, and technology-led finance operations with AI and automation.",
   },
 
   hero: {
@@ -1456,7 +1436,7 @@ const en = {
 
   features: {
     kicker: "Our Features",
-    title: "Why choose XLW Advisory?",
+    title: "Why choose XLOU & ASSOCIATES?",
     items: [
       {
         title: "Global Reach",
@@ -1510,18 +1490,6 @@ const en = {
         body:
           "Robert is an ACCA-qualified accountant who enjoys solving challenges with numbers. In her free time she enjoys reading, cooking, playing tennis, and learning about different cultures.",
       },
-      {
-        name: "Brad Jie Weng",
-        role: "Partner and Cusomer Director",
-        body:
-          "Brad supports day-to-day accounts work and enjoys the challenge of growing in a fast-paced environment. He loves travelling and is known as a reliable and responsible team member.",
-      },
-      {
-        name: "Albert Parker, ACCA",
-        role: "Partner & Accounts Manager",
-        body:
-          "Albert manages a diverse portfolio of clients, providing services across audit and assurance, data input, VAT compliance, management accounting, payroll, and related professional services. Outside of his professional responsibilities, he has a keen interest in travel, reading, football, and outdoor activities. ",
-      },
     ],
   },
 
@@ -1531,7 +1499,7 @@ const en = {
     subtitle: "A quick overview of how we work and who we support.",
     items: [
       {
-        q: "What services does XLW Advisory offer?",
+        q: "What services does XLOU & ASSOCIATES offer?",
         a: "We provide accounting, bookkeeping, financial statement preparation, budgeting, tax planning, audit and assurance support, VAT compliance, and tax advisory — with technology-led workflows where appropriate.",
       },
       {
@@ -1552,8 +1520,8 @@ const en = {
 
     contact: {
   meta: {
-    title: "Contact | XLW Advisory",
-    description: "Contact XLW Advisory: request a free consultation, call or email our team in Malta.",
+    title: "Contact | XLOU & ASSOCIATES",
+    description: "Contact XLOU & ASSOCIATES: request a free consultation, call or email our team in Malta.",
   },
   breadcrumb: {
     home: "Home",
@@ -1570,8 +1538,8 @@ const en = {
     },
     email: "info@accountantsmalta.com",
     address: {
-      line1: "XLW Advisory",
-      line2: "San M. Kolbe, St. Paul's Bay, Malta",
+      line1: "XLOU & ASSOCIATES",
+      line2: "Triq San Massimiljanu Kolbe, Buġibba, St Paul's Bay SPB 1231, Malta",
     },
   },
   cards: {
@@ -1637,7 +1605,7 @@ const en = {
   },
   map: {
     title: "Visit us in Malta",
-    body: "San M. Kolbe, St. Paul's Bay, Malta",
+    body: "Triq San Massimiljanu Kolbe, Buġibba, St Paul's Bay SPB 1231, Malta",
     ctaCall: "Call now",
     imageAlt: "Map placeholder",
   },
@@ -1654,15 +1622,15 @@ const zh: SiteCopy = {
   ...en,
 
   site: {
-    name: "XLW Advisory Malta",
-    slogan: "Trustworthy | Focus | Vision | Compliance",
+    name: "XLOU & ASSOCIATES",
+    slogan: "信任 · 专注 · 前瞻 · 合规",
     founderStatement:
-      "XLW Advisory was founded by Mr. Xiaoyang Lou and his partners. Mr. Lou is a licensed CPA and practising auditor with warrant number 121145. Together with his associates, the firm works with clients to support growth, success, and compliant business operations.",
+      "XLOU & ASSOCIATES 由 Lou Xiaoyang 先生及其专业团队提供服务。Lou 先生是持牌注册会计师及执业审计师，执业许可编号为 121145。团队为客户提供清晰、合规的会计、审计、税务及跨境咨询支持。",
   },
 
   navbar: {
   ...en.navbar,
-  brand: { label: "XLW Advisory Malta", href: "/zh" },
+  brand: { label: "XLOU & ASSOCIATES", href: "/zh" },
   login: { label: "登录", href: "https://mgt.accountantsmalta.com" },
   cta: { label: "联系我们", href: "/zh/contact" },
 
@@ -1797,7 +1765,7 @@ const zh: SiteCopy = {
     ...en.testimonials,
     title: "客户评价",
     items: [
-      { ...en.testimonials.items[0], headline: "账目更清晰、决策更快——正是我们需要的。", text: "XLW Advisory帮我们理顺了报表与流程，让团队更有信心。沟通主动、配合顺畅。" },
+      { ...en.testimonials.items[0], headline: "账目更清晰、决策更快——正是我们需要的。", text: "XLOU & ASSOCIATES 帮我们理顺了报表与流程，让团队更有信心。沟通主动、配合顺畅。" },
       { ...en.testimonials.items[1], headline: "交付稳定且灵活，结果非常好。", text: "我们快速切换到新流程，并建立了周度管理报表。沟通高效、工作持续可靠。" },
       { ...en.testimonials.items[2], headline: "专业、合规、并且为增长做好准备。", text: "从簿记到规划，现在一切更有结构。现金流更透明，决策也更有数据依据。" },
     ],
@@ -1810,16 +1778,6 @@ const zh: SiteCopy = {
     "融合会计、税务、合规、财务运营与数字化能力的务实团队——专注于清晰、高效与可靠交付。",
   cta: { label: "关于我们", href: "/about-us" },
   members: [
-    {
-      name: "Jie Weng",
-      role: "合伙人及客户经理",
-      image: "/assets/generated/team-jie.svg",
-      socials: [
-        { kind: "facebook", label: "Facebook", href: "#" },
-        { kind: "x", label: "X", href: "#" },
-        { kind: "linkedin", label: "LinkedIn", href: "#" },
-      ],
-    },
     {
       name: "Yixin QI",
       role: "基金发起人及投资合伙人",
@@ -1838,16 +1796,6 @@ const zh: SiteCopy = {
         { kind: "instagram", label: "Instagram", href: "#" },
         { kind: "facebook", label: "Facebook", href: "#" },
         { kind: "linkedin", label: "LinkedIn", href: "#" },
-      ],
-    },
-    {
-      name: "Albert Parker",
-      role: "合伙人及会计师",
-      image: "/assets/generated/team-albert.svg",
-      socials: [
-        { kind: "facebook", label: "Facebook", href: "#" },
-        { kind: "behance", label: "Behance", href: "#" },
-        { kind: "dribbble", label: "Dribbble", href: "#" },
       ],
     },
     {
@@ -1878,8 +1826,9 @@ const zh: SiteCopy = {
     title: "博客",
     featured: {
       ...en.blog.featured,
-      title: "可扩展的财务运营：成长型企业实用手册",
-      excerpt: "一份实战指南：规范簿记、稳定月结、可决策的管理报表与数据看板——不拖慢业务执行。",
+      title: "马耳他 2027 年预算案：税务、企业与生活成本重点措施",
+      excerpt: "从小型公司 25% 税率、家庭免税档到 COLA、旅游环保费与合规改革，一篇看清政策内容与落地边界。",
+      href: "/zh/knowledge/malta-budget-2027-key-measures",
     },
     items: [
       { ...en.blog.items[0], title: "VAT、薪资与报表：常见坑位避雷清单", excerpt: "给创始人和运营团队的一份检查表：让合规更顺滑，把时间留给增长。", date: "2026年1月", tag: "合规" },
@@ -1887,7 +1836,7 @@ const zh: SiteCopy = {
       { ...en.blog.items[2], title: "兼职CFO：什么时候需要？你会得到什么？", excerpt: "预测、内控、融资准备与战略决策——CFO能为你解锁什么能力。", date: "2026年1月", tag: "财务" },
       { ...en.blog.items[3], title: "AI 簿记与自动化：最值得自动化的环节", excerpt: "哪些该自动化、哪些需要复核？如何用更好的流程提升准确性。", date: "2026年1月", tag: "AI" },
     ],
-    all: { label: "查看全部文章", href: "/#blog" },
+    all: { label: "查看全部文章", href: "/zh/knowledge" },
   },
 
   contactCta: {
@@ -1933,7 +1882,7 @@ const zh: SiteCopy = {
     cookieSettingsLabel: "Cookie 设置",
     copyright: {
       prefix: "© 保留所有权利。制作：",
-      linkLabel: "XLW Advisory",
+      linkLabel: "XLOU & ASSOCIATES",
       linkHref: "#top",
     },
   },
@@ -1980,20 +1929,20 @@ const zh: SiteCopy = {
       // portal: {
       //   title: "Vacei Portal — 为客户打造",
       //   body:
-      //     "每位 XLW Advisory 客户都可使用 Vacei Portal——我们的安全在线平台，让协作更顺畅、更透明。上传资料、跟踪进度、在线签署、与团队直接沟通，一站式完成。",
+      //     "每位 XLOU & ASSOCIATES 客户都可使用 Vacei Portal——我们的安全在线平台，让协作更顺畅、更透明。上传资料、跟踪进度、在线签署、与团队直接沟通，一站式完成。",
       //   featuresLabel: "主要功能",
-      //   features: ["安全文件上传", "进度实时跟踪", "在线电子签名", "与 XLW Advisory 团队直接沟通"],
+      //   features: ["安全文件上传", "进度实时跟踪", "在线电子签名", "与 XLOU & ASSOCIATES 团队直接沟通"],
       // },
       benefits: {
-        title: "XLW Advisory 的核心优势。",
+        title: "XLOU & ASSOCIATES 的核心优势。",
         body:
-          "XLW Advisory 提供广泛服务、经验丰富的专业团队、个性化方案，并可接入国际资源。我们拥有具竞争力的价格、快速交付、透明沟通、灵活与可靠，确保您获得最新且准确的财务信息。",
+          "XLOU & ASSOCIATES 提供广泛服务、经验丰富的专业团队、个性化方案，并可接入国际资源。我们拥有具竞争力的价格、快速交付、透明沟通、灵活与可靠，确保您获得最新且准确的财务信息。",
         items: ["个性化方案", "快速交付", "透明沟通", "灵活性", "可靠性", "技术驱动", "前瞻建议", "AI 专长"],
       },
       personalized: {
         title: "需要个性化方案？",
         body:
-          "会计与审计机构（如 XLW Advisory）可根据不同客户的具体需求提供量身定制的服务。我们的专家团队将深入了解您的业务与财务目标，并设计解决方案来匹配您的实际情况。",
+          "会计与审计机构（如 XLOU & ASSOCIATES）可根据不同客户的具体需求提供量身定制的服务。我们的专家团队将深入了解您的业务与财务目标，并设计解决方案来匹配您的实际情况。",
         ctaPrimary: "联系我们",
         ctaSecondary: "立即致电",
       },
@@ -2014,7 +1963,7 @@ const zh: SiteCopy = {
 
     taxServices: {
       meta: {
-        title: "税务服务 | XLW Advisory",
+        title: "税务服务 | XLOU & ASSOCIATES",
         description:
           "合规申报与税务筹划支持，包括税表准备与申报、税务优化策略、税务审查协助、国际税务与VAT支持等。",
       },
@@ -2097,22 +2046,22 @@ const zh: SiteCopy = {
       // portal: {
       //   title: "Vacei Portal — 为客户打造",
       //   body:
-      //     "每位 XLW Advisory 客户都可使用 Vacei Portal——我们的安全在线平台，让协作更顺畅、更透明。上传资料、跟踪进度、在线签署、与团队直接沟通，一站式完成。",
+      //     "每位 XLOU & ASSOCIATES 客户都可使用 Vacei Portal——我们的安全在线平台，让协作更顺畅、更透明。上传资料、跟踪进度、在线签署、与团队直接沟通，一站式完成。",
       //   featuresLabel: "主要功能",
-      //   features: ["安全文件上传", "进度实时跟踪", "在线电子签名", "与 XLW Advisory 团队直接沟通"],
+      //   features: ["安全文件上传", "进度实时跟踪", "在线电子签名", "与 XLOU & ASSOCIATES 团队直接沟通"],
       // },
 
       benefits: {
-        title: "XLW Advisory 的核心优势。",
+        title: "XLOU & ASSOCIATES 的核心优势。",
         body:
-          "XLW Advisory 提供广泛服务、经验丰富的专业团队、个性化方案，并可接入国际资源。我们拥有具竞争力的价格、快速交付、透明沟通、灵活与可靠，确保您获得最新且准确的财务信息。",
+          "XLOU & ASSOCIATES 提供广泛服务、经验丰富的专业团队、个性化方案，并可接入国际资源。我们拥有具竞争力的价格、快速交付、透明沟通、灵活与可靠，确保您获得最新且准确的财务信息。",
         items: ["个性化方案", "快速交付", "透明沟通", "灵活性", "可靠性", "技术驱动", "前瞻建议", "AI 专长"],
       },
 
       personalized: {
         title: "需要个性化方案？",
         body:
-          "会计与审计机构（如 XLW Advisory）可根据不同客户的具体需求提供量身定制的服务。我们的专家团队将深入了解您的业务与财务目标，并设计解决方案来匹配您的实际情况。",
+          "会计与审计机构（如 XLOU & ASSOCIATES）可根据不同客户的具体需求提供量身定制的服务。我们的专家团队将深入了解您的业务与财务目标，并设计解决方案来匹配您的实际情况。",
         ctaPrimary: "联系我们",
         ctaSecondary: "立即致电",
       },
@@ -2143,7 +2092,7 @@ const zh: SiteCopy = {
 
     auditAndAssurance: {
   meta: {
-    title: "审计与鉴证 | XLW Advisory",
+    title: "审计与鉴证 | XLOU & ASSOCIATES",
     description:
       "审计与鉴证服务：财务报表审计、内部审计、合规审计与风险管理审计。提升报表可信度，优化流程与内控。",
   },
@@ -2227,22 +2176,22 @@ const zh: SiteCopy = {
   // portal: {
   //   title: "Vacei Portal — 为客户打造",
   //   body:
-  //     "每位 XLW Advisory 客户都可使用 Vacei Portal——我们的安全在线平台，让协作更顺畅、更透明。上传资料、跟踪进度、在线签署、与团队直接沟通，一站式完成。",
+  //     "每位 XLOU & ASSOCIATES 客户都可使用 Vacei Portal——我们的安全在线平台，让协作更顺畅、更透明。上传资料、跟踪进度、在线签署、与团队直接沟通，一站式完成。",
   //   featuresLabel: "主要功能",
-  //   features: ["安全文件上传", "进度实时跟踪", "在线电子签名", "与 XLW Advisory 团队直接沟通"],
+  //   features: ["安全文件上传", "进度实时跟踪", "在线电子签名", "与 XLOU & ASSOCIATES 团队直接沟通"],
   // },
 
   benefits: {
-    title: "XLW Advisory 的核心优势。",
+    title: "XLOU & ASSOCIATES 的核心优势。",
     body:
-      "XLW Advisory 提供广泛服务、经验丰富的专业团队、个性化方案，并可接入国际资源。我们拥有具竞争力的价格、快速交付、透明沟通、灵活与可靠，确保您获得最新且准确的财务信息。",
+      "XLOU & ASSOCIATES 提供广泛服务、经验丰富的专业团队、个性化方案，并可接入国际资源。我们拥有具竞争力的价格、快速交付、透明沟通、灵活与可靠，确保您获得最新且准确的财务信息。",
     items: ["个性化方案", "快速交付", "透明沟通", "灵活性", "可靠性", "技术驱动", "前瞻建议", "AI 专长"],
   },
 
   personalized: {
     title: "需要个性化方案？",
     body:
-      "会计与审计机构（如 XLW Advisory）可根据不同客户的具体需求提供量身定制的服务。我们的专家团队将深入了解您的业务与财务目标，并设计解决方案来匹配您的实际情况。",
+      "会计与审计机构（如 XLOU & ASSOCIATES）可根据不同客户的具体需求提供量身定制的服务。我们的专家团队将深入了解您的业务与财务目标，并设计解决方案来匹配您的实际情况。",
     ctaPrimary: "联系我们",
     ctaSecondary: "立即致电",
   },
@@ -2273,7 +2222,7 @@ const zh: SiteCopy = {
 
     bookkeeping: {
   meta: {
-    title: "簿记服务 | XLW Advisory",
+    title: "簿记服务 | XLOU & ASSOCIATES",
     description:
       "簿记服务：夯实财务基础。应付/应收管理、银行对账、财务记录维护与总账管理，帮助企业获得清晰可靠的财务视图。",
   },
@@ -2284,7 +2233,7 @@ const zh: SiteCopy = {
     heading: "簿记",
     subheading: "为您的财务基础提供精确与稳定",
     intro:
-      "在 XLW Advisory，我们深知准确的簿记是企业稳健经营的基石。我们的簿记服务确保每一笔交易都被正确、高效地记录，为您提供清晰可用的财务洞察。我们处理细节，让您专注于业务增长，并确信账务始终准确、及时、可追溯。",
+      "在 XLOU & ASSOCIATES，我们深知准确的簿记是企业稳健经营的基石。我们的簿记服务确保每一笔交易都被正确、高效地记录，为您提供清晰可用的财务洞察。我们处理细节，让您专注于业务增长，并确信账务始终准确、及时、可追溯。",
     callout: {
       kicker: "服务重点",
       badge: "簿记",
@@ -2323,7 +2272,7 @@ const zh: SiteCopy = {
       },
     ],
     closingNote:
-      "XLW Advisory 团队将以高标准簿记能力支持您的业务，让您基于可靠数据做出更明智的经营决策。",
+      "XLOU & ASSOCIATES 团队将以高标准簿记能力支持您的业务，让您基于可靠数据做出更明智的经营决策。",
   },
 
   industries: {
@@ -2344,22 +2293,22 @@ const zh: SiteCopy = {
   // portal: {
   //   title: "Vacei Portal — 为客户打造",
   //   body:
-  //     "每位 XLW Advisory 客户都可使用 Vacei Portal——我们的安全在线平台，让协作更顺畅、更透明。上传资料、跟踪进度、在线签署、与团队直接沟通，一站式完成。",
+  //     "每位 XLOU & ASSOCIATES 客户都可使用 Vacei Portal——我们的安全在线平台，让协作更顺畅、更透明。上传资料、跟踪进度、在线签署、与团队直接沟通，一站式完成。",
   //   featuresTitle: "主要功能：",
-  //   features: ["安全文件上传", "进度实时跟踪", "在线电子签名", "与 XLW Advisory 团队直接沟通"],
+  //   features: ["安全文件上传", "进度实时跟踪", "在线电子签名", "与 XLOU & ASSOCIATES 团队直接沟通"],
   // },
 
   benefits: {
-    title: "XLW Advisory 的核心优势。",
+    title: "XLOU & ASSOCIATES 的核心优势。",
     body:
-      "XLW Advisory 提供广泛服务、经验丰富的专业团队、个性化方案，并可接入国际资源。我们拥有具竞争力的价格、快速交付、透明沟通、灵活与可靠，确保您获得最新且准确的财务信息。",
+      "XLOU & ASSOCIATES 提供广泛服务、经验丰富的专业团队、个性化方案，并可接入国际资源。我们拥有具竞争力的价格、快速交付、透明沟通、灵活与可靠，确保您获得最新且准确的财务信息。",
     items: ["个性化方案", "快速交付", "透明沟通", "灵活性", "可靠性", "技术驱动", "前瞻建议", "AI 专长"],
   },
 
   personalized: {
     title: "需要个性化方案？",
     body:
-      "会计与审计机构（如 XLW Advisory）可根据不同客户的具体需求提供量身定制的服务。我们的专家团队将深入了解您的业务与财务目标，并设计解决方案来匹配您的实际情况。",
+      "会计与审计机构（如 XLOU & ASSOCIATES）可根据不同客户的具体需求提供量身定制的服务。我们的专家团队将深入了解您的业务与财务目标，并设计解决方案来匹配您的实际情况。",
     ctaEmail: "邮件联系",
   },
     },
@@ -2464,9 +2413,9 @@ const zh: SiteCopy = {
 
 
   benefits: {
-    title: "XLW Advisory的核心优势。",
+    title: "XLOU & ASSOCIATES的核心优势。",
     body:
-      "XLW Advisory 提供广泛服务、经验丰富的专业团队、个性化方案，并可接入国际资源。我们拥有具竞争力的价格、快速交付、透明沟通、灵活与可靠，确保您获得最新且准确的财务信息。",
+      "XLOU & ASSOCIATES 提供广泛服务、经验丰富的专业团队、个性化方案，并可接入国际资源。我们拥有具竞争力的价格、快速交付、透明沟通、灵活与可靠，确保您获得最新且准确的财务信息。",
     items: ["个性化方案", "快速交付", "透明沟通", "灵活性", "可靠性", "技术驱动", "前瞻建议", "AI 专长"],
   },
 
@@ -2495,7 +2444,7 @@ const zh: SiteCopy = {
   personalized: {
     title: "需要个性化方案？",
     body:
-      "会计与审计机构（如 XLW Advisory）可根据不同客户的具体需求提供量身定制的服务。我们的专家团队将深入了解您的业务与财务目标，并设计解决方案来匹配您的实际情况。",
+      "会计与审计机构（如 XLOU & ASSOCIATES）可根据不同客户的具体需求提供量身定制的服务。我们的专家团队将深入了解您的业务与财务目标，并设计解决方案来匹配您的实际情况。",
     ctaEmail: "邮件联系",
   },
     },
@@ -2574,10 +2523,10 @@ const zh: SiteCopy = {
   //   body:
   //     "每位xwl客户都可使用 Vacei Portal 安全在线平台：上传资料、跟踪进度、在线签署、与团队直接沟通，一站式完成。",
   //   featuresTitle: "主要功能：",
-  //   features: ["安全文件上传", "进度实时跟踪", "在线电子签名", "与 XLW Advisory 团队直接沟通"],
+  //   features: ["安全文件上传", "进度实时跟踪", "在线电子签名", "与 XLOU & ASSOCIATES 团队直接沟通"],
   // },
   benefits: {
-    title: "XLW Advisory的核心优势。",
+    title: "XLOU & ASSOCIATES的核心优势。",
     body:
       "我们提供经验丰富的专业团队、个性化方案与国际资源支持，价格具竞争力、交付快速、沟通透明且可靠。",
     items: ["个性化方案", "快速交付", "透明沟通", "灵活性", "可靠性", "技术驱动", "前瞻建议", "AI 专长"],
@@ -2612,7 +2561,7 @@ const zh: SiteCopy = {
 
     industries: {
       meta: {
-        title: "行业 | XLW Advisory",
+        title: "行业 | XLOU & ASSOCIATES",
         description:
           "我们在马耳他服务的行业：私人客户、创业者与专业机构，并提供旅游与游艇、科技、医疗与美容、房地产与酒店、电商、教育培训等行业支持。",
       },
@@ -2712,9 +2661,9 @@ const zh: SiteCopy = {
 
     aboutUs: {
   meta: {
-    title: "关于我们 | XLW Advisory",
+    title: "关于我们 | XLOU & ASSOCIATES",
     description:
-      "关于 XLW Advisory：位于马耳他的专业服务机构，专注会计、审计、税务，以及以 AI 与自动化驱动的财务运营。",
+      "关于 XLOU & ASSOCIATES：位于马耳他的专业服务机构，专注会计、审计、税务，以及以 AI 与自动化驱动的财务运营。",
   },
 
   hero: {
@@ -2771,7 +2720,7 @@ const zh: SiteCopy = {
 
   features: {
     kicker: "我们的优势",
-    title: "为什么选择 XLW Advisory？",
+    title: "为什么选择 XLOU & ASSOCIATES？",
     items: [
       { title: "全球资源", body: "通过全球联盟与合作伙伴网络获得国际经验与支持。", icon: "ai-globe" },
       { title: "合规与创新", body: "以合规为底线，同时以技术驱动流程更高效。", icon: "ai-shield" },
@@ -2785,11 +2734,9 @@ const zh: SiteCopy = {
     title: "专业团队",
     note: "*团队图片为占位图，准备好后可替换为真实照片。",
     items: [
-      { name: "Albert Parker, ACCA", role: "合伙人及会计师", body: "Albert负责多个客户的资料录入、VAT 申报、管理报表、薪资等。业余喜欢健身、骑行、徒步与户外活动。可使用中文与英语沟通。" },
       { name: "Kanwal Fayyaz", role: "合规与审计支持", body: "Kanwal负责公司合规与审计支持，注重细节且组织能力强。下班后喜欢追剧与烘焙。" },
       { name: "Yixin QI", role: "基金发起人及投资合伙人", body: "YIXIN 是 基金创始人，热爱信息技术和智能化产品。业余时间喜欢游艇帆船。" },
       { name: "Robert Fox ACCA", role: "虚拟财务团队负责人", body: "Robert是 ACCA 会计师，喜欢用数字解决问题。业余喜欢阅读、烹饪、网球与了解不同文化。" },
-      { name: "Brad Weng", role: "合伙人及客户经理", body: "Brad支持日常管理及客户工作，喜欢在快节奏环境中成长。他热爱探索新鲜事务，是可靠且有责任心的团队成员。" },
       { name: "Shawn Lou, ACCA, MIA, CPA(Practising)", role: "执行合伙人", body: "Shawn负责日常财务运营并管理团队，跨行业经验丰富，专注且持续学习。业余喜欢旅行、读书与音乐。" },
     ],
   },
@@ -2809,8 +2756,8 @@ const zh: SiteCopy = {
 
     contact: {
   meta: {
-    title: "联系我们 | XLW Advisory",
-    description: "联系 XLW Advisory：预约免费咨询，或直接致电/电邮我们在马耳他的团队。",
+    title: "联系我们 | XLOU & ASSOCIATES",
+    description: "联系 XLOU & ASSOCIATES：预约免费咨询，或直接致电/电邮我们在马耳他的团队。",
   },
   breadcrumb: {
     home: "首页",
@@ -2827,8 +2774,8 @@ const zh: SiteCopy = {
     },
     email: "info@accountantsmalta.com",
     address: {
-      line1: "XLW Advisory",
-      line2: "San M. Kolbe, St. Paul's Bay, Malta",
+      line1: "XLOU & ASSOCIATES",
+      line2: "Triq San Massimiljanu Kolbe, Buġibba, St Paul's Bay SPB 1231, Malta",
     },
   },
   cards: {
@@ -2884,7 +2831,7 @@ const zh: SiteCopy = {
   },
   map: {
     title: "到访马耳他",
-    body: "地址确认后，可替换为 Google 地图嵌入或静态地图图片。",
+    body: "办公室位于 Triq San Massimiljanu Kolbe，Buġibba，圣保罗湾 SPB 1231，马耳他。",
     ctaCall: "立即致电",
     imageAlt: "地图占位图",
   },

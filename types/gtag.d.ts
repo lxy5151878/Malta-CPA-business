@@ -3,10 +3,10 @@ type GtagConsentValue = "granted" | "denied";
 interface Window {
   dataLayer: unknown[];
   gtag?: (...args: unknown[]) => void;
-  xlwOpenCookieSettings?: () => void;
+  openCookieSettings?: () => void;
 }
 
-type XlwConsentPreferences = {
+type ConsentPreferences = {
   analytics: boolean;
   advertising: boolean;
   updatedAt: string;

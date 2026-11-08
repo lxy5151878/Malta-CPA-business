@@ -36,7 +36,7 @@ Create `functions/.env.accountantsmalta` with:
 
 ```dotenv
 LEAD_NOTIFICATION_EMAIL=info@accountantsmalta.com
-LEAD_FROM_EMAIL=XLW Advisory Website <leads@accountantsmalta.com>
+LEAD_FROM_EMAIL=XLOU & ASSOCIATES Website <leads@accountantsmalta.com>
 CONTACT_ALLOWED_ORIGINS=https://accountantsmalta.com,https://www.accountantsmalta.com,https://accountantsmalta.web.app,http://localhost:3000,http://127.0.0.1:3000
 ```
 
@@ -100,7 +100,7 @@ new -> contacted -> qualified -> proposal -> won
 
 Use the captured `gclid`, `gbraid`, `wbraid`, email, phone, consent status, and conversion time to map qualified or won outcomes in Google Ads Data Manager. Recommended conversion actions:
 
-- `Qualified lead`: a real prospect within XLW Advisory's service scope, with a genuine need and agreed next step.
+- `Qualified lead`: a real prospect within XLOU & ASSOCIATES' service scope, with a genuine need and agreed next step.
 - `Converted lead`: a prospect that has signed an engagement or paid for a service.
 
 Once qualified-lead reporting is stable, make `Qualified lead` the main bidding goal. Keep raw form submissions as an observation or secondary goal so bidding learns from lead quality rather than volume alone.

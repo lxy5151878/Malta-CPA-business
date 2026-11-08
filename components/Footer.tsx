@@ -1,6 +1,7 @@
 import type { SiteCopy } from "@/lib/siteCopy";
 import CurrentYear from "@/components/CurrentYear";
 import CookieSettingsButton from "@/components/CookieSettingsButton";
+import BrandMark from "@/components/BrandMark";
 
 function SocialIcon({ kind }: { kind: string }) {
   // template uses around-icons (ai-*)
@@ -12,10 +13,13 @@ export default function Footer({ copy }: { copy: SiteCopy }) {
   const copyrightText = f.copyright.prefix.replace(/^[^\s]+\s*/, "");
 
   return (
-    <footer className="footer bg-dark pb-3 pt-sm-3 py-md-4 py-lg-5" data-bs-theme="dark" id={f.id}>
+    <footer className="footer pb-3 pt-sm-3 py-md-4 py-lg-5" id={f.id}>
       <div className="container pb-4 pt-5">
         <div className="row pb-4 mb-4 border-bottom border-light border-opacity-10">
           <div className="col-lg-8">
+            <a className="footer-brand d-inline-flex mb-4" href={copy.navbar.brand.href} aria-label={copy.navbar.brand.label}>
+              <BrandMark />
+            </a>
             <div className="fs-sm text-uppercase text-primary fw-semibold mb-2">{copy.site.slogan}</div>
             <p className="text-body-secondary mb-0" style={{ maxWidth: 860 }}>
               {copy.site.founderStatement}
@@ -25,7 +29,7 @@ export default function Footer({ copy }: { copy: SiteCopy }) {
 
         <div className="row g-4 pb-4 mb-4 border-bottom border-light border-opacity-10">
           <div className="col-lg-3">
-            <h2 className="h6 text-light mb-2">{f.officialLinks.title}</h2>
+            <h2 className="h6 text-dark mb-2">{f.officialLinks.title}</h2>
             <p className="fs-sm text-body-secondary mb-0">{f.officialLinks.description}</p>
           </div>
           <div className="col-lg-9">

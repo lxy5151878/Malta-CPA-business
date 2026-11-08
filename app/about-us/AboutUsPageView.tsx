@@ -17,9 +17,6 @@ export default function AboutUsPageView({ lang }: { lang: Lang }) {
     if (normalizedName.includes("kanwal")) return "/assets/generated/team-kanwal.svg";
     if (normalizedName.includes("yixin")) return "/assets/generated/team-yixin.svg";
     if (normalizedName.includes("robert")) return "/assets/generated/team-robert.svg";
-    if (normalizedName.includes("brad") || normalizedName.includes("jie")) return "/assets/generated/team-jie.svg";
-    if (normalizedName.includes("albert")) return "/assets/generated/team-albert.svg";
-
     return "/assets/generated/team-yixin.svg";
   };
 
@@ -70,7 +67,7 @@ export default function AboutUsPageView({ lang }: { lang: Lang }) {
           <div className="ratio ratio-16x9">
             <img
               src={aboutHeroImage}
-              alt="About Malta Business Partners"
+              alt="XLOU & ASSOCIATES professional services in Malta"
               className="w-100 h-100"
               style={{ objectFit: "cover" }}
             />

@@ -56,7 +56,7 @@ export default function GoogleConsent() {
       }
     });
 
-    window.xlwOpenCookieSettings = () => {
+    window.openCookieSettings = () => {
       const current = getConsentPreferences();
       setAnalytics(current?.analytics ?? false);
       setAdvertising(current?.advertising ?? false);
@@ -66,12 +66,12 @@ export default function GoogleConsent() {
 
     return () => {
       active = false;
-      delete window.xlwOpenCookieSettings;
+      delete window.openCookieSettings;
     };
   }, []);
 
   function save(nextAnalytics: boolean, nextAdvertising: boolean) {
-    const preferences: XlwConsentPreferences = {
+    const preferences: ConsentPreferences = {
       analytics: nextAnalytics,
       advertising: nextAdvertising,
       updatedAt: new Date().toISOString(),
@@ -98,10 +98,10 @@ export default function GoogleConsent() {
   if (!open) return null;
 
   return (
-    <div className="xlw-consent" role="dialog" aria-modal="true" aria-labelledby="xlw-consent-title">
-      <div className="xlw-consent__panel">
-        <div className="xlw-consent__copy">
-          <h2 className="h5 mb-2" id="xlw-consent-title">
+    <div className="privacy-consent" role="dialog" aria-modal="true" aria-labelledby="privacy-consent-title">
+      <div className="privacy-consent__panel">
+        <div className="privacy-consent__copy">
+          <h2 className="h5 mb-2" id="privacy-consent-title">
             {isZh ? "您的隐私选择" : "Your privacy choices"}
           </h2>
           <p className="fs-sm text-body-secondary mb-0">
@@ -116,7 +116,7 @@ export default function GoogleConsent() {
         </div>
 
         {customizing && (
-          <div className="xlw-consent__preferences">
+          <div className="privacy-consent__preferences">
             <div className="form-check form-switch">
               <input className="form-check-input" type="checkbox" checked disabled id="consent-essential" />
               <label className="form-check-label" htmlFor="consent-essential">
@@ -150,7 +150,7 @@ export default function GoogleConsent() {
           </div>
         )}
 
-        <div className="xlw-consent__actions">
+        <div className="privacy-consent__actions">
           {customizing ? (
             <button className="btn btn-primary" type="button" onClick={() => save(analytics, advertising)}>
               {isZh ? "保存选择" : "Save choices"}

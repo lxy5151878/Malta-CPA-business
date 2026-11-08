@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 import { getSiteCopy } from "@/lib/siteCopy";
 import { getCategory, localizedArticle, type KnowledgeArticle, type Lang } from "@/lib/knowledge";
 import { absoluteUrl, companyMeta } from "@/lib/siteMeta";
@@ -38,6 +39,7 @@ export default function KnowledgeArticleView({ article, lang }: { article: Knowl
         mainEntityOfPage: pageUrl,
         inLanguage: lang === "zh" ? "zh-CN" : "en",
         keywords: local.keywords.join(", "),
+        ...(article.heroImage ? { image: absoluteUrl(article.heroImage.src) } : {}),
       },
       {
         "@type": "FAQPage",
@@ -117,6 +119,20 @@ export default function KnowledgeArticleView({ article, lang }: { article: Knowl
             <h1 className="display-5 mb-3">{local.title}</h1>
             <p className="fs-lg text-body-secondary mb-4">{local.summary}</p>
 
+            {article.heroImage ? (
+              <figure className="mb-5">
+                <Image
+                  className="d-block w-100 rounded-1"
+                  src={article.heroImage.src}
+                  alt={lang === "zh" ? article.heroImage.altZh : article.heroImage.alt}
+                  width={1680}
+                  height={945}
+                  priority
+                  style={{ aspectRatio: "16 / 9", objectFit: "cover" }}
+                />
+              </figure>
+            ) : null}
+
             <div className="border rounded-1 p-4 mb-5 bg-secondary">
               <h2 className="h5 mb-3">{lang === "zh" ? "SEO / AI 摘要" : "SEO / AI Summary"}</h2>
               <dl className="row mb-0">
@@ -172,8 +188,8 @@ export default function KnowledgeArticleView({ article, lang }: { article: Knowl
               <h2 className="h1 mb-3">{lang === "zh" ? "官方引用与来源" : "Official References and Sources"}</h2>
               <p className="text-body-secondary">
                 {lang === "zh"
-                  ? "法律结论应以官方来源为准。来源复核中的微信文章仅作为选题和整理输入。"
-                  : "Legal conclusions should be checked against official sources. Source-intake WeChat articles are drafting inputs only until reviewed."}
+                  ? "法律结论应以官方来源和最终生效文本为准。专业评论用于交叉核对；来源复核中的微信文章仅作为选题和整理输入。"
+                  : "Legal conclusions should be checked against official sources and the final text in force. Professional commentary is used for cross-checking; source-intake WeChat articles remain drafting inputs until reviewed."}
               </p>
               <ul className="list-unstyled mb-0">
                 {article.references.map((reference) => (

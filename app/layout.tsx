@@ -9,16 +9,16 @@ const GA_MEASUREMENT_ID = "G-6L6Z841W2D";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "XLW Advisory Malta",
+  title: "XLOU & ASSOCIATES",
   description:
     "Accounting, tax, audit, finance and digital services delivered by a team that keeps things clear, compliant and growth-ready.",
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "XLW Advisory Malta",
+    title: "XLOU & ASSOCIATES",
     description:
       "Accounting, tax, audit, finance and digital services delivered by a Malta-based advisory team.",
-    siteName: "XLW Advisory",
+    siteName: "XLOU & ASSOCIATES",
   },
 };
 
@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('set', 'ads_data_redaction', true);
             gtag('set', 'url_passthrough', true);
             try {
-              var savedConsent = JSON.parse(localStorage.getItem('xlw_consent_v1') || 'null');
+              var savedConsent = JSON.parse(localStorage.getItem('lou_associates_consent_v1') || 'null');
               if (savedConsent) {
                 gtag('consent', 'update', {
                   analytics_storage: savedConsent.analytics ? 'granted' : 'denied',

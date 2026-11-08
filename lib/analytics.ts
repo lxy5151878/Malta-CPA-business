@@ -1,5 +1,5 @@
-export const CONSENT_STORAGE_KEY = "xlw_consent_v1";
-export const ATTRIBUTION_STORAGE_KEY = "xlw_attribution_v1";
+export const CONSENT_STORAGE_KEY = "lou_associates_consent_v1";
+export const ATTRIBUTION_STORAGE_KEY = "lou_associates_attribution_v1";
 export const CONSENT_VERSION = "2026-09-19";
 
 export type Attribution = Partial<
@@ -16,11 +16,11 @@ export type Attribution = Partial<
   >
 >;
 
-export function getConsentPreferences(): XlwConsentPreferences | null {
+export function getConsentPreferences(): ConsentPreferences | null {
   if (typeof window === "undefined") return null;
 
   try {
-    return JSON.parse(window.localStorage.getItem(CONSENT_STORAGE_KEY) || "null") as XlwConsentPreferences | null;
+    return JSON.parse(window.localStorage.getItem(CONSENT_STORAGE_KEY) || "null") as ConsentPreferences | null;
   } catch {
     return null;
   }

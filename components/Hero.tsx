@@ -276,7 +276,7 @@ export default function Hero({ lang, copy }: { lang: Lang; copy: SiteCopy }) {
   return (
     <>
       <section className="home-guided-hero">
-        <img className="home-guided-hero-image" src={hero.backgroundImage} alt="XLW Advisory team supporting international businesses" />
+        <img className="home-guided-hero-image" src={hero.backgroundImage} alt="Valletta skyline at golden hour" />
         <div className="home-guided-hero-overlay" aria-hidden="true" />
 
         <div className="container home-guided-hero-inner">

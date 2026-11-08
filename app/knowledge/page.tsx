@@ -3,9 +3,9 @@ import KnowledgeIndexView from "@/components/KnowledgeIndexView";
 import { absoluteUrl } from "@/lib/siteMeta";
 
 export const metadata: Metadata = {
-  title: "Malta Knowledge Center | XLW Advisory",
+  title: "Malta Knowledge Center | XLOU & ASSOCIATES",
   description:
-    "AI-optimized Malta company, accounting, tax, VAT, payroll and cross-border services articles from XLW Advisory.",
+    "AI-optimized Malta company, accounting, tax, VAT, payroll and cross-border services articles from XLOU & ASSOCIATES.",
   keywords: ["Malta accounting", "Malta tax", "Malta company compliance", "Malta Knowledge Center"],
   alternates: {
     canonical: absoluteUrl("/knowledge"),

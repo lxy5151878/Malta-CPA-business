@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: local.seoTitle,
       description: local.metaDescription,
       url: absoluteUrl(`/knowledge/${slug}`),
-      siteName: "XLW Advisory",
+      siteName: "XLOU & ASSOCIATES",
       type: "article",
       locale: "en_US",
     },

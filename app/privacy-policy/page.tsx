@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 import { getSiteCopy } from "@/lib/siteCopy";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | XLW Advisory",
+  title: "Privacy Policy | XLOU & ASSOCIATES",
   description:
-    "Privacy Policy for XLW Advisory. Learn how we collect, use, protect, and retain personal data in accordance with GDPR.",
+    "Privacy Policy for XLOU & ASSOCIATES. Learn how we collect, use, protect, and retain personal data in accordance with GDPR.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
             <section className="mb-4">
               <h2 className="h4">1. Introduction</h2>
               <p className="mb-0">
-                XLW Advisory is a professional services firm providing accounting, audit &amp; assurance, tax, and
+                XLOU & ASSOCIATES is a professional services firm providing accounting, audit &amp; assurance, tax, and
                 advisory services. We are committed to safeguarding the confidentiality, integrity, and security of
                 personal data processed through this website (“Website”).
               </p>
@@ -81,7 +81,7 @@ export default function PrivacyPolicyPage() {
             <section className="mb-4">
               <h2 className="h4">4. Professional Confidentiality</h2>
               <p className="mb-0">
-                As a professional advisory firm, XLW Advisory is subject to strict professional confidentiality and ethical
+                As a professional advisory firm, XLOU & ASSOCIATES is subject to strict professional confidentiality and ethical
                 obligations. Any personal data received in the context of accounting, audit, tax, or advisory services is
                 treated with enhanced confidentiality and processed solely for lawful professional purposes.
               </p>
@@ -99,7 +99,7 @@ export default function PrivacyPolicyPage() {
 
             <section className="mb-4">
               <h2 className="h4">6. Data Sharing and Transfers</h2>
-              <p className="mb-2">XLW Advisory does not sell or commercially exploit personal data.</p>
+              <p className="mb-2">XLOU & ASSOCIATES does not sell or commercially exploit personal data.</p>
               <p className="mb-2">Personal data may be disclosed only where:</p>
               <ul className="mb-2">
                 <li>Required by law, court order, or regulatory authority</li>
@@ -160,7 +160,7 @@ export default function PrivacyPolicyPage() {
             <section className="mb-4">
               <h2 className="h4">11. Third-Party Websites</h2>
               <p className="mb-0">
-                This Website may contain links to external websites. XLW Advisory is not responsible for the content or
+                This Website may contain links to external websites. XLOU & ASSOCIATES is not responsible for the content or
                 privacy practices of third-party websites.
               </p>
             </section>

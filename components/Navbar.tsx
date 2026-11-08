@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Lang, SiteCopy, NavItem } from "@/lib/siteCopy";
 import LangSwitch from "@/components/LangSwitch";
+import BrandMark from "@/components/BrandMark";
 import { Suspense } from "react";
 
 export default function Navbar({ lang, copy }: { lang: Lang; copy: SiteCopy }) {
@@ -16,7 +17,7 @@ export default function Navbar({ lang, copy }: { lang: Lang; copy: SiteCopy }) {
       : nav.items;
 
   return (
-    <header className="navbar navbar-expand-lg fixed-top bg-light navbar-stuck">
+    <header className="navbar navbar-expand-xxl fixed-top bg-light navbar-stuck">
       <div className="container">
         {/* Brand */}
         {/* <a className="navbar-brand pe-sm-3" href={nav.brand.href}>
@@ -30,19 +31,12 @@ export default function Navbar({ lang, copy }: { lang: Lang; copy: SiteCopy }) {
           </span>
           {nav.brand.label}
         </a> */}
-        <a className="navbar-brand pe-sm-3 d-flex flex-column align-items-center py-1" href={nav.brand.href}>
-          <img src="/assets/logo.png" alt={nav.brand.label} width={70} height={70} className="flex-shrink-0" />
-          <span
-            className="d-none d-sm-block text-primary fw-semibold text-uppercase"
-            style={{ fontSize: 10, lineHeight: 1.1, whiteSpace: "nowrap" }}
-          >
-            {copy.site.slogan}
-          </span>
-          {/* <span>{nav.brand.label}</span> */}
+        <a className="navbar-brand py-2 pe-2 pe-xl-3" href={nav.brand.href} aria-label={nav.brand.label}>
+          <BrandMark compact />
         </a>
 
         {/* ✅ Mobile: language switch OUTSIDE hamburger, left of toggler */}
-        <div className="d-lg-none d-flex align-items-center ms-auto me-2">
+        <div className="d-xxl-none d-flex align-items-center ms-auto me-2">
           <Suspense fallback={null}>
             <LangSwitch lang={lang} />
           </Suspense>
@@ -62,10 +56,10 @@ export default function Navbar({ lang, copy }: { lang: Lang; copy: SiteCopy }) {
         {/* Nav */}
         <nav className="collapse navbar-collapse" id="navbarNav">
           {/* ✅ Wrapper so we can center UL on desktop while keeping right controls */}
-          <div className="w-100 d-lg-flex align-items-center">
+          <div className="w-100 d-xxl-flex align-items-center">
             {/* ✅ Desktop center: mx-lg-auto centers this block between brand and right controls */}
             <ul
-              className="navbar-nav navbar-nav-scroll mx-lg-auto"
+              className="navbar-nav navbar-nav-scroll mx-xxl-auto"
               style={{ ["--ar-scroll-height" as any]: "520px" }}
             >
               {navItems.map((item: NavItem) => {
@@ -88,7 +82,7 @@ export default function Navbar({ lang, copy }: { lang: Lang; copy: SiteCopy }) {
 
                       {isMega ? (
                         <div className="dropdown-menu p-0 overflow-hidden" style={{ minWidth: 360, maxWidth: 520 }}>
-                          <div className="p-2 p-lg-3">
+                          <div className="p-2 p-xxl-3">
                             <ul className="list-unstyled mb-0" style={{ maxHeight: "70vh", overflowY: "auto" }}>
                               {item.children.map((c) => (
                                 <li key={c.label}>
@@ -126,14 +120,14 @@ export default function Navbar({ lang, copy }: { lang: Lang; copy: SiteCopy }) {
             </ul>
 
             {/* ✅ Desktop right controls */}
-            <div className="d-none d-lg-flex align-items-center me-3">
+            <div className="d-none d-xxl-flex align-items-center me-3">
               <Suspense fallback={null}>
                 <LangSwitch lang={lang} />
               </Suspense>
             </div>
 
             <a
-              className="btn btn-outline-primary btn-sm fs-sm d-none d-lg-inline-flex me-2 navbar-action"
+              className="btn btn-outline-primary btn-sm fs-sm d-none d-xxl-inline-flex me-2 navbar-action"
               href={nav.login.href}
               aria-label={nav.login.label}
               title={nav.login.label}
@@ -143,7 +137,7 @@ export default function Navbar({ lang, copy }: { lang: Lang; copy: SiteCopy }) {
             </a>
 
             <a
-              className="btn btn-primary btn-sm fs-sm d-none d-lg-inline-flex navbar-action"
+              className="btn btn-primary btn-sm fs-sm d-none d-xxl-inline-flex navbar-action"
               href={nav.cta.href}
               aria-label={nav.cta.label}
               title={nav.cta.label}
@@ -154,7 +148,7 @@ export default function Navbar({ lang, copy }: { lang: Lang; copy: SiteCopy }) {
           </div>
 
           {/* ✅ Mobile-only: Contact button INSIDE hamburger (all <lg) */}
-          <div className="d-lg-none d-grid gap-2 p-3 border-top mt-2">
+          <div className="d-xxl-none d-grid gap-2 p-3 border-top mt-2">
             <a className="btn btn-outline-primary w-100" href={nav.login.href}>
               <i className="ai-login fs-xl me-2 ms-n1" aria-hidden="true" />
               {nav.login.label}

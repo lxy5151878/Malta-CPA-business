@@ -24,6 +24,11 @@ export type KnowledgeArticle = {
   updated: string;
   readTime: string;
   status: "published" | "source-review";
+  heroImage?: {
+    src: string;
+    alt: string;
+    altZh: string;
+  };
   sections: {
     heading: string;
     headingZh: string;
@@ -39,7 +44,7 @@ export type KnowledgeArticle = {
   references: {
     label: string;
     href: string;
-    type: "Primary source" | "Source intake";
+    type: "Primary source" | "Professional commentary" | "Source intake";
   }[];
 };
 
@@ -198,6 +203,219 @@ export const localSourceArchiveSummary = {
 };
 
 export const knowledgeArticles: KnowledgeArticle[] = [
+  {
+    slug: "malta-budget-2027-key-measures",
+    category: "malta-market-context",
+    title: "Malta Budget 2027: Key Tax, Business and Cost-of-Living Measures",
+    titleZh: "马耳他 2027 年预算案：税务、企业与生活成本重点措施",
+    seoTitle: "Malta Budget 2027: Tax, Business, Tourism and Cost-of-Living Measures",
+    seoTitleZh: "马耳他 2027 年预算案详解：企业税、家庭税务、旅游与生活成本措施",
+    metaDescription:
+      "A practical summary of Malta Budget 2027 covering the proposed 25% small-company tax rate, family tax bands, COLA, Super Bonus, tourism eco-contribution, VAT compliance and business planning.",
+    metaDescriptionZh:
+      "实务总结马耳他 2027 年预算案，涵盖小型公司 25% 税率、家庭免税档、COLA、Super Bonus、旅游环保费、VAT 合规及企业准备事项。",
+    keywords: [
+      "Malta Budget 2027",
+      "Malta corporate tax 2027",
+      "Malta income tax bands 2027",
+      "Malta tourism eco-contribution 2027",
+      "Malta cost of living 2027",
+    ],
+    keywordsZh: ["马耳他 2027 年预算案", "马耳他企业税", "马耳他家庭税率", "马耳他旅游环保费", "马耳他生活成本"],
+    summary:
+      "Budget 2027 combines family tax relief and cost-of-living support with a proposed 25% rate for qualifying retained or reinvested small-company profits, higher tourism eco-contributions and targeted VAT and compliance reforms. This article separates announced policy from measures still awaiting legislation or detailed rules.",
+    summaryZh:
+      "2027 年预算案在家庭减税和生活成本支持之外，提出对符合条件的小型公司留存或再投资利润适用 25% 税率，同时提高旅游环保费并推进 VAT 与申报制度改革。本文特别区分已经公布的政策方向与仍待立法或细则落实的措施。",
+    updated: "2026-11-08",
+    readTime: "10 min read",
+    status: "published",
+    heroImage: {
+      src: "/assets/generated/malta-budget-2027-hero.png",
+      alt: "Valletta skyline with a financial planning desk for Malta Budget 2027",
+      altZh: "瓦莱塔城市景观与马耳他 2027 年预算财务规划桌面",
+    },
+    sections: [
+      {
+        heading: "Executive summary: what matters most",
+        headingZh: "先看结论：最值得关注的变化",
+        body: [
+          "The Budget Speech was delivered on 26 October 2026. For businesses, the headline proposal is a 25% company tax rate for companies with turnover not exceeding EUR 1 million, but only on qualifying profits retained in the company or reinvested in the business. Distributed profits remain subject to the existing 35% company tax treatment described in the speech, and detailed conditions are still to be issued.",
+          "Households receive new child-related tax thresholds, a EUR 6.41 weekly cost-of-living adjustment and a tax-free Super Bonus linked to 2025 employment or self-employment income. Tourism operators face higher eco-contributions from 1 January 2027, while VAT, receipt enforcement and married-couple filing reforms are intended to modernise compliance.",
+          "Important status point: a Budget Speech announces policy. Some measures require a Finance Act, legal notice, subsidiary legislation, administrative guidance or system changes before they become fully operative. Figures below reflect the official speech and government releases available as at 8 November 2026.",
+        ],
+        bodyZh: [
+          "2027 年预算演讲于 2026 年 10 月 26 日发表。对企业而言，最受关注的是：营业额不超过 100 万欧元的公司，其符合条件的留存或再投资利润拟适用 25% 公司税率。但该优惠并非适用于所有利润；预算演讲说明，已分派利润仍按现行 35% 公司税处理，具体条件仍待后续公布。",
+          "家庭方面，预算提高有子女家庭的免税门槛，COLA 每周增加 6.41 欧元，并按 2025 年就业或自雇收入发放免税 Super Bonus。旅游业自 2027 年 1 月 1 日起将面临更高的环保费，同时政府计划改革 VAT、财政收据执法和夫妻报税机制。",
+          "需要特别注意：预算演讲属于政策公布，不等于所有措施已经完成立法。部分项目仍需《财政法》、法律公告、附属法规、行政指引或系统更新后才能正式执行。本文资料截至 2026 年 11 月 8 日。",
+        ],
+      },
+      {
+        heading: "Economic and fiscal backdrop",
+        headingZh: "经济与财政背景",
+        body: [
+          "The Government projects real GDP growth of 4.1% in 2026 and 3.8% in 2027. The unemployment rate is forecast at 3.3% in 2026 and 3.2% in 2027, while inflation is projected at 2.5% and 2.7% respectively.",
+          "The fiscal deficit is projected at 2.6% of GDP in 2027 and the debt-to-GDP ratio at 46.8%. The Government also expects to allocate around EUR 400 million to maintain electricity and fuel support. These assumptions matter because they frame the tax relief and support measures without an announced increase in income tax rates, the standard VAT rate or social security contribution rates.",
+        ],
+        bodyZh: [
+          "政府预计实际 GDP 在 2026 年增长 4.1%，2027 年增长 3.8%；失业率预计分别为 3.3% 和 3.2%，通胀率预计分别为 2.5% 和 2.7%。",
+          "2027 年财政赤字预计为 GDP 的 2.6%，债务占 GDP 比例预计为 46.8%。政府还预计投入约 4 亿欧元维持电力与燃油支持。上述假设构成减税与补贴政策的财政背景；预算未宣布提高所得税税率、标准 VAT 税率或社会保障缴费率。",
+        ],
+      },
+      {
+        heading: "Proposed 25% rate for qualifying small-company profits",
+        headingZh: "小型公司符合条件利润拟适用 25% 税率",
+        body: [
+          "The speech proposes that companies with annual turnover not exceeding EUR 1 million may benefit from a 25% company tax rate instead of 35%. The lower rate is confined to profits retained in the company or reinvested in the business. Profits distributed as dividends remain within the 35% treatment described in the Budget Speech.",
+          "The practical effect will depend on yet-to-be-issued rules covering eligibility, the definition and tracking of reinvestment, the treatment of groups or connected companies, timing, anti-avoidance limits and interaction with Malta's shareholder refund system. A company should therefore model the possible benefit, but should not book it as a confirmed tax saving before final legislation and guidance are reviewed.",
+          "Action for owner-managed companies: separate expected 2027 profits into operating cash needs, genuine reinvestment, retained reserves and planned distributions. This creates the evidence trail needed to test the final rules when published.",
+        ],
+        bodyZh: [
+          "预算演讲提出，年营业额不超过 100 万欧元的公司，可能由 35% 公司税率改为适用 25% 税率。较低税率仅限公司留存或用于业务再投资的利润；作为股息分派的利润，仍按预算演讲所述的 35% 处理。",
+          "实际效果仍取决于后续细则，包括资格标准、再投资的定义与追踪、集团或关联公司处理、适用时间、反避税限制，以及与马耳他股东退税制度的衔接。因此，公司可以先进行情景测算，但在最终法规和指引发布前，不宜把该优惠当作已经确定的节税额入账。",
+          "对股东管理型公司的实务建议是：把预计 2027 年利润预先区分为营运资金、真实再投资、留存储备和拟分派利润。这样在细则发布后，才能迅速判断资格并建立可核验的资料链。",
+        ],
+      },
+      {
+        heading: "New family income tax thresholds",
+        headingZh: "有子女家庭的新免税门槛",
+        body: [
+          "For 2027, the announced zero-rate threshold under married computation is EUR 20,000 for one child and EUR 30,000 for two or more children. Under parent computation, the corresponding thresholds are EUR 16,000 and EUR 24,000.",
+          "These are tax-band changes rather than cash grants. The actual benefit depends on the taxpayer's income, tax status, number of qualifying children and the final payroll and tax-return implementation. Employers should update payroll settings only when the official 2027 tables and operational instructions are available.",
+        ],
+        bodyZh: [
+          "2027 年公布的免税门槛如下：采用 married computation 的家庭，一个子女时前 20,000 欧元适用 0% 税率，两个或以上子女时前 30,000 欧元适用 0%；采用 parent computation 时，相应门槛为 16,000 欧元和 24,000 欧元。",
+          "这属于所得税档调整，并非直接现金补贴。实际收益取决于纳税人的收入、计税身份、符合条件的子女人数，以及最终薪资系统和税表的执行方式。雇主应在官方 2027 税表和操作说明发布后再更新 payroll 设置。",
+        ],
+      },
+      {
+        heading: "COLA and the 2027 Super Bonus",
+        headingZh: "COLA 与 2027 年 Super Bonus",
+        body: [
+          "The 2027 cost-of-living adjustment is EUR 6.41 per week. Employers should include the measure in payroll and employment-cost forecasts, while waiting for the final payroll tables and official implementation instructions.",
+          "A tax-free Super Bonus is scheduled for the first quarter of 2027 and is calculated by reference to 2025 employment or self-employment income. The announced amounts are EUR 1,000 for income of at least EUR 12,000; EUR 925 for EUR 11,000-11,999; EUR 875 for EUR 10,000-10,999; EUR 800 for EUR 9,000-9,999; EUR 725 for EUR 8,000-8,999; EUR 650 for EUR 7,000-7,999; EUR 575 for EUR 6,000-6,999; and EUR 500 for EUR 2,000-5,999.",
+          "The speech states that the measure also covers eligible self-employed people, working pensioners and part-time workers. Eligibility should still be checked against the final administrative rules and income records.",
+        ],
+        bodyZh: [
+          "2027 年生活成本调整 COLA 为每周 6.41 欧元。雇主应把该金额纳入薪资和用工成本预测，并等待最终 payroll 税表和官方执行说明。",
+          "免税 Super Bonus 计划于 2027 年第一季度发放，并以 2025 年就业或自雇收入计算。公布的档位为：收入至少 12,000 欧元，奖金 1,000 欧元；11,000-11,999 欧元，奖金 925 欧元；10,000-10,999 欧元，875 欧元；9,000-9,999 欧元，800 欧元；8,000-8,999 欧元，725 欧元；7,000-7,999 欧元，650 欧元；6,000-6,999 欧元，575 欧元；2,000-5,999 欧元，500 欧元。",
+          "预算演讲说明，符合条件的自雇人士、在职养老金领取者和兼职人士也在适用范围内，但最终资格仍应结合行政细则和收入记录核对。",
+        ],
+      },
+      {
+        heading: "VAT, fiscal receipts and tax filing reform",
+        headingZh: "VAT、财政收据与报税改革",
+        body: [
+          "The Budget package signals a mandatory domestic reverse-charge mechanism for certain construction-related business-to-business supplies, together with further guidance on the VAT treatment of food. The exact scope, start date, invoice wording and reporting treatment require the final legal and administrative text.",
+          "For failures involving fiscal receipts, the announced direction is to use administrative penalties more proportionately: EUR 100 for a first breach, EUR 200 for a second, EUR 400 for a third, and EUR 500 for a fourth or subsequent breach within 24 months. The professional summary published by the Malta Institute of Taxation notes that criminal liability would be extinguished when the penalty is paid within 30 days; businesses should verify the enacted provision before relying on this treatment.",
+          "The Government also announced a project under which married couples would file separate individual income tax returns by default, while retaining an option for joint filing. This is a reform project rather than a reason to change current filing practice immediately.",
+        ],
+        bodyZh: [
+          "预算方案提出，对部分建筑相关的企业对企业交易引入强制境内 reverse charge，并进一步说明食品的 VAT 处理。具体适用范围、生效日期、发票表述和申报方式仍需以最终法规和行政文件为准。",
+          "对于财政收据违规，公布方向是采用更具比例性的行政罚款：首次 100 欧元、第二次 200 欧元、第三次 400 欧元，24 个月内第四次及其后每次 500 欧元。Malta Institute of Taxation 的专业摘要指出，若在 30 日内缴清罚款，刑事责任可予消除；企业在依赖该处理前仍应核对最终生效条文。",
+          "政府还宣布推进夫妻默认分别提交个人所得税申报、同时保留联合申报选择权的项目。这目前属于改革项目，不代表纳税人应立即改变现行申报方式。",
+        ],
+      },
+      {
+        heading: "Tourism eco-contribution from 1 January 2027",
+        headingZh: "2027 年 1 月 1 日起的旅游环保费",
+        body: [
+          "The announced eco-contribution for collective accommodation is EUR 8 per person per night, capped at EUR 64 per person per stay. For short-let accommodation, it is EUR 10 per person per night, capped at EUR 80 per person per stay.",
+          "The Malta Institute of Taxation summary also records a EUR 10 charge for cruise passengers, EUR 5 for visitors to the Blue Lagoon and an exemption for accommodation provided by English-language schools. Operators should confirm classification, collection, invoice and return procedures when the implementing rules are published.",
+          "Hotels, short-let hosts, property managers and booking platforms should review 2027 pricing, customer disclosures, booking-system fields and reconciliations now. The contribution collected from guests should not be confused with the operator's own revenue.",
+        ],
+        bodyZh: [
+          "预算公布的环保费为：集体住宿每人每晚 8 欧元，每次入住每人最高 64 欧元；短租住宿每人每晚 10 欧元，每次入住每人最高 80 欧元。",
+          "Malta Institute of Taxation 的摘要还记录：邮轮乘客 10 欧元、Blue Lagoon 游客 5 欧元，英语语言学校提供的住宿可获豁免。经营者应在实施细则公布后确认住宿分类、代收方式、发票列示和申报流程。",
+          "酒店、短租房东、物业管理人和预订平台现在就应复核 2027 年定价、客户披露、预订系统字段和对账流程。向客人代收的环保费不应与经营者自身营业收入混淆。",
+        ],
+      },
+      {
+        heading: "Property, mobility and investment incentives",
+        headingZh: "房地产、交通与投资激励",
+        body: [
+          "The Budget renews a number of existing incentives for property acquisition and renovation, electric vehicles, renewable energy, voluntary organisations and sports. It also announces that transactions involving airspace property rights should be taxed according to their economic substance.",
+          "Because several items renew or refine existing schemes, the eligibility period, expenditure limits, application route and interaction with other grants should be checked scheme by scheme. A headline announcement is not a substitute for the applicable legal notice or administering authority's conditions.",
+        ],
+        bodyZh: [
+          "预算延续多项现有激励，包括房地产购买与翻新、电动车、可再生能源、志愿组织和体育相关措施；同时提出对 airspace property rights 交易按经济实质征税。",
+          "由于不少项目是延续或调整既有计划，资格期间、支出上限、申请渠道以及与其他补助的衔接，仍需逐项核对。预算中的概括性公布不能替代具体法律公告或主管机构条件。",
+        ],
+      },
+      {
+        heading: "Practical 2027 action checklist",
+        headingZh: "企业与个人的 2027 年行动清单",
+        body: [
+          "Companies should prepare a 2027 budget model using the announced COLA, energy-cost assumptions and sector-specific charges; test retained-profit and dividend scenarios separately; identify construction, tourism or property transactions affected by the proposals; and keep a list of measures that require final rules.",
+          "Employers should wait for official payroll tables before changing deductions, but can forecast employment cost now. Tourism operators should update rate cards and systems before January. Families should review the new child-related bands and Super Bonus eligibility using verified 2025 income data.",
+          "Before filing a return, issuing an invoice under a new VAT treatment or recognising a tax benefit, check the final Finance Act, legal notices and guidance from the relevant Maltese authority. This article is a planning summary, not a substitute for advice based on a taxpayer's full facts.",
+        ],
+        bodyZh: [
+          "公司应使用已公布的 COLA、能源成本假设和行业收费编制 2027 年预算；把留存利润、再投资和股息分派分别测算；识别涉及建筑、旅游或房地产的新政策交易；并建立一张“等待最终细则”的跟踪表。",
+          "雇主在更改代扣金额前应等待官方 payroll 税表，但现在即可预测用工成本。旅游经营者应在 1 月前更新价目和系统。有子女家庭则应结合经核实的 2025 年收入资料，复核新税档和 Super Bonus 资格。",
+          "在提交税表、按新的 VAT 方式开票或确认税收优惠前，应核对最终《财政法》、法律公告及马耳他相关主管部门指引。本文属于规划性总结，不能替代基于纳税人完整事实的专业意见。",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Will every Malta company with turnover below EUR 1 million pay 25% tax?",
+        qZh: "营业额低于 100 万欧元的马耳他公司都会按 25% 纳税吗？",
+        a: "No. The announced lower rate is limited to qualifying profits retained or reinvested in the business, and detailed eligibility rules are still pending. Distributed profits remain within the 35% treatment described in the Budget Speech.",
+        aZh: "不会。公布的低税率只适用于符合条件的留存或再投资利润，具体资格细则仍待发布；预算演讲说明，已分派利润仍按 35% 处理。",
+      },
+      {
+        q: "When do the higher tourism eco-contributions start?",
+        qZh: "提高后的旅游环保费何时开始？",
+        a: "The announced start date is 1 January 2027. Operators should still check the implementing legislation and collection procedures before applying the new treatment.",
+        aZh: "公布的生效日期为 2027 年 1 月 1 日。经营者在执行新标准前，仍应核对实施法规和代收程序。",
+      },
+      {
+        q: "Is the Super Bonus taxable?",
+        qZh: "Super Bonus 需要纳税吗？",
+        a: "The Budget Speech describes the Super Bonus as tax-free. The payment is linked to 2025 income bands and is scheduled for the first quarter of 2027, subject to the final administrative process.",
+        aZh: "预算演讲把 Super Bonus 描述为免税款项。奖金按 2025 年收入档位计算，计划在 2027 年第一季度发放，具体仍以最终行政流程为准。",
+      },
+      {
+        q: "Are all Budget 2027 measures already law?",
+        qZh: "2027 年预算措施都已经成为法律了吗？",
+        a: "No. The Budget Speech sets out Government policy, but some measures need legislation, legal notices, guidance or system changes. The legal text in force at the relevant date remains decisive.",
+        aZh: "不是。预算演讲公布政府政策，但部分措施仍需立法、法律公告、指引或系统更新。相关日期实际生效的法律文本才具有决定性。",
+      },
+      {
+        q: "What should a business do before the final rules are published?",
+        qZh: "最终细则公布前，企业现在应该做什么？",
+        a: "Model the announced measures, preserve data that may prove eligibility, identify affected systems and contracts, and maintain an implementation tracker. Do not file or recognise a benefit based only on the speech.",
+        aZh: "可以先进行情景测算，保存可能证明资格的资料，识别受影响的系统和合同，并建立实施跟踪表；不要仅凭预算演讲就申报或确认优惠。",
+      },
+    ],
+    references: [
+      {
+        label: "Ministry for Finance: Budget Speech 2027 (official PDF, 26 October 2026)",
+        href: "https://finance.gov.mt/wp-content/uploads/2026/10/Diskors-tal-Budget-2027.pdf",
+        type: "Primary source",
+      },
+      {
+        label: "Government of Malta: Budget 2027 economic measures",
+        href: "https://www.gov.mt/en/Government/DOI/Press%20Releases/Pages/2026/10/29/PR261820en.aspx",
+        type: "Primary source",
+      },
+      {
+        label: "Government of Malta: Budget 2027 energy and environmental measures",
+        href: "https://www.gov.mt/en/Government/DOI/Press%20Releases/Pages/2026/11/06/pr261867en.aspx",
+        type: "Primary source",
+      },
+      {
+        label: "Government of Malta: Budget 2027 social measures",
+        href: "https://www.gov.mt/en/Government/DOI/Press%20Releases/Pages/2026/10/27/PR261801.aspx",
+        type: "Primary source",
+      },
+      {
+        label: "Malta Institute of Taxation: Malta Budget 2027 tax summary",
+        href: "https://maintax.org/news/malta-budget-2027/",
+        type: "Professional commentary",
+      },
+    ],
+  },
   {
     slug: "malta-annual-return-guide",
     category: "company-formation",
@@ -4075,9 +4293,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     seoTitle: "AI-Optimized Malta Compliance Articles: Editorial Standard and Source Policy",
     seoTitleZh: "AI 优化马耳他合规文章：编辑标准与来源政策",
     metaDescription:
-      "The editorial standard used by XLW Advisory to convert source material into bilingual, AI-search-friendly Malta compliance knowledge articles.",
+      "The editorial standard used by XLOU & ASSOCIATES to convert source material into bilingual, AI-search-friendly Malta compliance knowledge articles.",
     metaDescriptionZh:
-      "XLW Advisory 将来源材料整理为双语、适合 AI 搜索引用的马耳他合规知识文章时采用的编辑标准。",
+      "XLOU & ASSOCIATES 将来源材料整理为双语、适合 AI 搜索引用的马耳他合规知识文章时采用的编辑标准。",
     keywords: ["Malta Knowledge Center", "AI SEO", "GEO search", "bilingual compliance articles"],
     keywordsZh: ["马耳他知识库", "AI SEO", "GEO 搜索", "双语合规文章"],
     summary:

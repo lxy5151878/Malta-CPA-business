@@ -1,6 +1,6 @@
-# XLW Advisory Malta
+# XLOU & ASSOCIATES
 
-Bilingual English and Chinese website for XLW Advisory, a Malta-based accounting, tax, audit and cross-border advisory firm.
+Bilingual English and Chinese website for XLOU & ASSOCIATES, a Malta-based accounting, tax, audit and cross-border advisory firm.
 
 The project uses Next.js App Router and exports a fully static site. It can be deployed from GitHub through Firebase App Hosting, Firebase Hosting, Vercel or another static hosting platform.
 

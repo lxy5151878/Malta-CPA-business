@@ -1,7 +1,9 @@
 "use client";
 
 import type { Lang } from "@/lib/siteCopy";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
+import type { MouseEvent } from "react";
 
 function toLangPath(pathname: string, lang: Lang) {
   const hasZh = pathname === "/zh" || pathname.startsWith("/zh/");
@@ -11,36 +13,41 @@ function toLangPath(pathname: string, lang: Lang) {
 }
 
 export default function LangSwitch({ lang }: { lang: Lang }) {
-  const checked = lang === "zh";
   const pathname = usePathname();
+  const router = useRouter();
   const searchParams = useSearchParams();
 
-  function go(next: Lang) {
+  function hrefFor(next: Lang) {
     const nextPath = toLangPath(pathname, next);
-
-    // keep any query string (optional but nice)
     const qs = searchParams.toString();
-    const href = qs ? `${nextPath}?${qs}` : nextPath;
+    return qs ? `${nextPath}?${qs}` : nextPath;
+  }
 
-    window.location.assign(href);
+  function keepHash(event: MouseEvent<HTMLAnchorElement>, next: Lang) {
+    const hash = window.location.hash;
+    if (!hash) return;
+    event.preventDefault();
+    router.push(`${hrefFor(next)}${hash}`);
   }
 
   return (
-    <div className="form-check form-switch mode-switch order-lg-2 me-3 me-lg-4 ms-auto">
-      <input
-        className="form-check-input"
-        type="checkbox"
-        id="lang-switch"
-        checked={checked}
-        onChange={(e) => go(e.target.checked ? "zh" : "en")}
-        aria-label="Language switch"
-      />
-      <label className="form-check-label" htmlFor="lang-switch">
-        <span className="fs-sm fw-semibold">Eng</span>
-      </label>
-      <label className="form-check-label" htmlFor="lang-switch">
-        <span className="fs-sm fw-semibold">中文</span>
-      </label>
+    <div className="btn-group btn-group-sm order-lg-2 me-3 me-lg-4 ms-auto" role="group" aria-label="Language switch">
+      <Link
+        className={`btn ${lang === "en" ? "btn-primary" : "btn-outline-primary"}`}
+        href={hrefFor("en")}
+        onClick={(event) => keepHash(event, "en")}
+        aria-current={lang === "en" ? "page" : undefined}
+      >
+        Eng
+      </Link>
+      <Link
+        className={`btn ${lang === "zh" ? "btn-primary" : "btn-outline-primary"}`}
+        href={hrefFor("zh")}
+        onClick={(event) => keepHash(event, "zh")}
+        aria-current={lang === "zh" ? "page" : undefined}
+      >
+        中文
+      </Link>
     </div>
   );
 }
