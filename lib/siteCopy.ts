@@ -160,7 +160,7 @@ const en = {
       { src: "/assets/customer-logo-3.PNG", alt: "Partner logo 3", width: 220 },
       { src: "/assets/customer-logo-4.PNG", alt: "Partner logo 4", width: 220 },
       { src: "/assets/customer-logo-5.JPG", alt: "Partner logo 5", width: 220 },
-      { src: "/assets/customer-logo-6.PNG", alt: "Partner logo 6", width: 220 },
+      { src: "/assets/customer-logo-6.png", alt: "Partner logo 6", width: 220 },
       { src: "/assets/customer-logo-2.JPG", alt: "Partner logo 2", width: 220 },
       // { src: "/assets/airbnb.svg", alt: "Partner logo 7", width: 220 },
       // { src: "/assets/philips.svg", alt: "Partner logo 8", width: 220 },
